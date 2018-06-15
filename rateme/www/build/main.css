@@ -25678,49 +25678,96 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-ion-content {
-  background: linear-gradient(48deg, rgba(70, 150, 204, 0.8) 0%, rgba(157, 72, 173, 0.86) 28%, rgba(0, 168, 168, 0.98) 93%, #00a8a8 100%);
+page-login ion-content {
+  background: #4aa1f3 !important;
 }
 
-ion-content .scroll-content {
+page-login ion-content .scroll-content {
   overflow: hidden !important;
 }
 
-ion-content .logo {
-  width: 25%;
+page-login ion-content .logo {
+  width: 30%;
   height: auto;
   margin: 0 auto !important;
-  margin-top: 20px !important;
+  margin-top: 50px !important;
   text-align: center !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 20px !important;
 }
 
-ion-content .logo img {
+page-login ion-content .logo img {
   width: 100%;
   height: auto;
   margin: 0 auto !important;
   text-align: center !important;
 }
 
-ion-content ion-item {
+page-login ion-content ion-item {
   border-radius: 3px !important;
   padding-left: 10px !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 15px !important;
   color: #fff !important;
   background-color: rgba(255, 255, 255, 0.2) !important;
   font-size: 0.9em;
 }
 
-ion-content ::-webkit-input-placeholder {
+page-login ion-content ::-webkit-input-placeholder {
   color: white !important;
 }
 
-ion-content .item-inner {
+page-login ion-content .item-inner {
   border-bottom: 0 !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-ion-content .signup {
+page-login ion-content .signup {
+  color: white !important;
+}
+
+page-register ion-content {
+  background: #4aa1f3 !important;
+}
+
+page-register ion-content .scroll-content {
+  overflow: hidden !important;
+}
+
+page-register ion-content .logo {
+  width: 30%;
+  height: auto;
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+page-register ion-content .logo img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+page-register ion-content ion-item {
+  border-radius: 3px !important;
+  padding-left: 10px !important;
+  margin-bottom: 15px !important;
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  font-size: 0.9em;
+}
+
+page-register ion-content ::-webkit-input-placeholder {
+  color: white !important;
+}
+
+page-register ion-content .item-inner {
+  border-bottom: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-register ion-content .signup {
   color: white !important;
 }
