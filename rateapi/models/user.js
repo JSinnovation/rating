@@ -5,13 +5,7 @@ const userSchema = mongoose.Schema({
     fullname: {type: String},
     email: {type: String},
     password: {type: String},
-    role: {type: String, default: ''},
-    companies: [{
-        company: {type: mongoose.Schema.Types.ObjectId, ref: 'Company'}
-    }],
-    imageId: {type: String, default: 'defaultPic.png'},
-    imageVersion: {type: String, default: '1523355901'}
-});
+    });
 
 userSchema.methods.encryptPassword = (password) => {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
@@ -20,3 +14,5 @@ userSchema.methods.encryptPassword = (password) => {
 userSchema.methods.checkPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 }
+
+module.exports =  mongoose.model('User',userSchema);

@@ -22,11 +22,11 @@ webpackEmptyAsyncContext.id = 110;
 
 var map = {
 	"../pages/home/home.module": [
-		275,
+		276,
 		2
 	],
 	"../pages/login/login.module": [
-		276,
+		275,
 		1
 	],
 	"../pages/register/register.module": [
@@ -87,37 +87,6 @@ var RegisterProvider = /** @class */ (function () {
     return RegisterProvider;
 }());
 
-/* import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-
-
-@Injectable()
-export class RegisterProvider {
-
-  constructor(public http: HttpClient) {
-    
-  }
-
-  registerUser(fullname, email, password): Observable<any>{
-    return this.http
-      .post('https://ratingapi.herokuapp.com/api/signup/user', {
-        fullname: fullname,
-        email: email,
-        password: password
-      });
-  }
-
-  loginUser(email, password): Observable<any>{
-    return this.http
-      .post('https://ratingapi.herokuapp.com/api/login/user', {
-        email: email,
-        password: password
-      });
-  }
-
-}
- */ 
 //# sourceMappingURL=register.js.map
 
 /***/ }),
@@ -176,8 +145,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] }
                     ]
                 }),

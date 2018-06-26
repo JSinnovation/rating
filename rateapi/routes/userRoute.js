@@ -2,10 +2,7 @@ const express = require('express');
 const router = express.Router();
 const UserCtrl = require('../controllers/userCtrl');
 
-//router.get('/home/:email', UserCtrl.homePage);
-
-//router.post('/signup/user', UserCtrl.createUser);
-//router.post('/login/user', UserCtrl.loginUser);
+router.post('/signup/user', UserCtrl.createUser);
 
 module.exports = router;
-
+ 

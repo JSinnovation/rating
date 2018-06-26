@@ -5,22 +5,16 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
-//const passport = require('passport');
-//const helmet = require('helmet');
-//const compression = require('compression');
+const passport = require('passport');
 
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB);
+mongoose.connect('mongodb://localhost/rateapp');
 
-//app.use(helmet());
-//app.use(compression());
+require('./passport/passport-local');
 
-
-//require('./passport/passport-local');
-
-app.use(cors());
+app.use(cors()); 
 
 app.use((req, res, next)  => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -36,16 +30,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use(session({
-    //secret: process.env.SECRET,
-    secret: 'thisisasecretkey',
+    secret: 'thisisasecretkey', 
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
-//app.use(passport.initialize());
-//app.use(passport.session());
-
+app.use(passport.initialize());
+app.use(passport.session()); 
+/* 
 //error suppression below
 app.on('unhandledRejection', error => {
     // Won't execute
@@ -54,17 +47,22 @@ app.on('unhandledRejection', error => {
   
   new Promise((_, reject) => reject({ test: 'woops!' })).catch(() => {});
 
-
+ */
 
 const user = require('./routes/userRoute');
 //const company = require('./routes/companyRoute');
 //const file = require('./routes/fileRoute');
 
 app.use('/api', user);
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+})
 //app.use('/api', company);
 //app.use('/api', file);
 
-app.listen(process.env.PORT || 3000, () => {
+/* app.listen(process.env.PORT || 3000, () => {
     console.log('Server running on port 3000'); 
 })
 
+ */ 

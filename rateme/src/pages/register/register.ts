@@ -30,7 +30,7 @@ loginPage(){
 userSignup(){
 this.reg.registerUser(this.fullname,this.email,this.password)
 .subscribe(res=> {
-  console.log(res)
+  console.log(res);
 });
 
 
