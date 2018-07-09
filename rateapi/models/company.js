@@ -11,7 +11,7 @@ const companySchema = mongoose.Schema({
     imageId: {type: String, default: ''},
     imageVersion: {type: String, default: ''},
     rating: [{
-        user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+        user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},    //reference to ID is coming from the User Collection
         culture: {type: Number, default: 0},
         benefits: {type: Number, default: 0},
         balance: {type: Number, default: 0},

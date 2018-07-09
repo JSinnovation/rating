@@ -21,5 +21,7 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
-
+openPage(){
+  this.navCtrl.push("CreatecompanyPage");
+}
 }

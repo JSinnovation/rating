@@ -16,7 +16,7 @@ passport.use('local-signup', new LocalStrategy({
         if(user){
             return done(null, false, 'User with email already exist');
         }
-
+            
         if(req.body.password.length < 5){
             return done(null, false, 'Password must not be less than 5 characters');
         }
@@ -31,7 +31,7 @@ passport.use('local-signup', new LocalStrategy({
         }) 
     });
 }));
-
+ 
 
 passport.use('local-login', new LocalStrategy({
     usernameField: 'email',
@@ -49,10 +49,11 @@ passport.use('local-login', new LocalStrategy({
         if(password.length < 5)
         return done(null, false, 'Password must not be less than 5 characters');
 
-        if(!user.checkPassword(request.body.password)){
+        if(!user.checkPassword(req.body.password)){
             return done(null, false, 'Password is incorrect');
         }
-
+        
+       
         return done(null,user);
         
         }) 
