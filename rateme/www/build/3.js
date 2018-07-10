@@ -68,7 +68,7 @@ var CreatecompanyPage = /** @class */ (function () {
         var _this = this;
         this.company.getUserData()
             .subscribe(function (res) {
-            console.log(res.user);
+            console.log(res);
             _this.userId = res.user._id;
         });
     };
@@ -82,11 +82,10 @@ var CreatecompanyPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-createcompany',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register Company</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<div> \n    <ion-item>\n      <ion-label color="primary" stacked>Company Name</ion-label>\n        <ion-input type="text" [(ngModel)]="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Company Address</ion-label>\n        <ion-input type="text" [(ngModel)]="address"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>City</ion-label>\n        <ion-input type="text" [(ngModel)]="city"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Country</ion-label>\n        <ion-input type="text" [(ngModel)]="country"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Sector</ion-label>\n        <ion-input type="text" [(ngModel)]="sector"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Website</ion-label>\n        <ion-input type="text" [(ngModel)]="website"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <button ion-button block (click)="register()">Register</button>\n      </ion-item>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */]) === "function" && _c || Object])
     ], CreatecompanyPage);
     return CreatecompanyPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=createcompany.js.map

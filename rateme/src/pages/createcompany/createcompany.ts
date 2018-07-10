@@ -27,7 +27,7 @@ userId: any;
   ionViewDidLoad() {
    this.company.getUserData()
    .subscribe(res=> {
-     console.log(res.user)
+     console.log(res)
   this.userId = res.user._id;
    });
   }

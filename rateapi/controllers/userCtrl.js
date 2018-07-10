@@ -53,7 +53,7 @@ passport.authenticate('local-login', (err, user, info) => {
 } 
 
 exports.homePage = async (req,res) => {
-const result = await user.FindOne({'email':req.params.email}, {'password': 0}) //exclude password and set it to zero
+const result = await user.findOne({'email':req.params.email}, {'password': 0}) //exclude password and set it to zero
 
 
 return res.status(200).json({user: result}); 
