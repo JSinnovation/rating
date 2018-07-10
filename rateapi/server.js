@@ -9,7 +9,7 @@ const passport = require('passport');
 
 const app = express();
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/rateapp');
 
 require('./passport/passport-local');
