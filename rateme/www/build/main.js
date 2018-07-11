@@ -1,4 +1,4 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
 /***/ 112:
 /***/ (function(module, exports) {
@@ -21,20 +21,24 @@ webpackEmptyAsyncContext.id = 112;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/createcompany/createcompany.module": [
+	"../pages/companies/companies.module": [
 		280,
+		4
+	],
+	"../pages/createcompany/createcompany.module": [
+		281,
 		3
 	],
 	"../pages/home/home.module": [
-		281,
+		282,
 		2
 	],
 	"../pages/login/login.module": [
-		282,
+		283,
 		1
 	],
 	"../pages/register/register.module": [
-		283,
+		284,
 		0
 	]
 };
@@ -55,54 +59,6 @@ module.exports = webpackAsyncContext;
 /***/ }),
 
 /***/ 198:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var RegisterProvider = /** @class */ (function () {
-    function RegisterProvider(http) {
-        this.http = http;
-    }
-    RegisterProvider.prototype.registerUser = function (fullname, email, password) {
-        return this.http
-            .post('http://localhost:3000/api/signup/user', {
-            fullname: fullname,
-            email: email,
-            password: password
-        });
-    };
-    RegisterProvider.prototype.loginUser = function (email, password) {
-        return this.http
-            .post('http://localhost:3000/api/login/user', {
-            email: email,
-            password: password
-        });
-    };
-    RegisterProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
-    ], RegisterProvider);
-    return RegisterProvider;
-}());
-
-//# sourceMappingURL=register.js.map
-
-/***/ }),
-
-/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,6 +109,10 @@ var CompanyProvider = /** @class */ (function () {
             userId: userId
         });
     };
+    CompanyProvider.prototype.getCompanies = function () {
+        return this.http
+            .get('http://localhost:3000/api/companies/all');
+    };
     CompanyProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
@@ -161,6 +121,54 @@ var CompanyProvider = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=company.js.map
+
+/***/ }),
+
+/***/ 199:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RegisterProvider = /** @class */ (function () {
+    function RegisterProvider(http) {
+        this.http = http;
+    }
+    RegisterProvider.prototype.registerUser = function (fullname, email, password) {
+        return this.http
+            .post('http://localhost:3000/api/signup/user', {
+            fullname: fullname,
+            email: email,
+            password: password
+        });
+    };
+    RegisterProvider.prototype.loginUser = function (email, password) {
+        return this.http
+            .post('http://localhost:3000/api/login/user', {
+            email: email,
+            password: password
+        });
+    };
+    RegisterProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], RegisterProvider);
+    return RegisterProvider;
+}());
+
+//# sourceMappingURL=register.js.map
 
 /***/ }),
 
@@ -191,8 +199,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_register_register__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_company_company__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_register_register__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_company_company__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -222,6 +230,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/companies/companies.module#CompaniesPageModule', name: 'CompaniesPage', segment: 'companies', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
@@ -284,7 +293,7 @@ var MyApp = /** @class */ (function () {
         this.pages = [
             { title: 'Home', component: 'HomePage', icon: 'home' },
             { title: 'Create Company', component: 'CreatecompanyPage', icon: 'create' },
-            { title: 'Companies', component: 'HomePage', icon: 'list-box' },
+            { title: 'Companies', component: 'CompaniesPage', icon: 'list-box' },
             { title: 'Search', component: 'HomePage', icon: 'search' },
             { title: 'Leaderboard', component: 'HomePage', icon: 'archive' },
         ];
