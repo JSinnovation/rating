@@ -74,12 +74,10 @@ var CreatecompanyPage = /** @class */ (function () {
             .subscribe(function (res) {
             if (res.user !== null) {
                 _this.userId = res.user._id;
+                console.log(res);
             }
         });
     };
-    //console.log(res)
-    /*  */
-    //this.userId = res.user._id;
     CreatecompanyPage.prototype.register = function () {
         var _this = this;
         this.company.createCompany(this.name, this.address, this.city, this.country, this.sector, this.website, this.userId)

@@ -106,7 +106,7 @@ var CompanyProvider = /** @class */ (function () {
             country: country,
             sector: sector,
             website: website,
-            userId: userId
+            userId: userId,
         });
     };
     CompanyProvider.prototype.getCompanies = function () {

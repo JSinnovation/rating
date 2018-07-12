@@ -31,20 +31,18 @@ userId: any;
   }
 
    ionViewDidEnter(){
+  
     this.company.getUserData()
+    
     .subscribe(res=> {
       if(res.user !== null){
         this.userId = res.user._id;
+        console.log(res)
+        
       }
     });
+    
    }
-
-
-     //console.log(res)
-    /*  */
-  //this.userId = res.user._id;
-  
-  
 
   register(){
     this.company.createCompany(this.name, this.address, this.city, this.country, this.sector, this.website, this.userId)

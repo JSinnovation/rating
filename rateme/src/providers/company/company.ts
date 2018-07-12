@@ -41,7 +41,7 @@ getEmail(){
         country,
         sector,
         website,
-        userId
+        userId,
       });
   }
 getCompanies(): Observable<any>{
