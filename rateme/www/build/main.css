@@ -27972,17 +27972,29 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-companies ion-title {
+.toolbar-title-md {
+  color: #73879C;
+}
+
+.bar-button {
+  color: #73879C;
+}
+
+.bar-button .sidebarmenu {
+  margin-left: 0px !important;
+}
+
+.bar-button ion-title {
   margin-left: -15px;
   width: 100% !important;
   float: left;
 }
 
-page-companies .back-button {
+.bar-button .back-button {
   margin-left: -3px;
 }
 
-page-companies .toolbar-title-md {
+.bar-button .toolbar-title-md {
   margin-left: -5px !important;
 }
 
@@ -28034,6 +28046,25 @@ page-companies ion-content .avg {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+page-createcompany ion-content {
+  margin-top: 10px !important;
+}
+
+page-createcompany .label-md[stacked] {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+page-createcompany .btnItem .item-inner {
+  border: none !important;
+}
+
+page-createcompany .item-inner .button {
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 page-home ion-content {

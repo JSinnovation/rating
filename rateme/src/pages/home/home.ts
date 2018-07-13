@@ -24,4 +24,8 @@ export class HomePage {
 openPage(){
   this.navCtrl.push("CreatecompanyPage");
 }
+reviewPage(){
+  this.navCtrl.push("ReviewPage");
+}
+
 }

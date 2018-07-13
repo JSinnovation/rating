@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 284:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewPageModule", function() { return ReviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__review__ = __webpack_require__(291);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RegisterPageModule = /** @class */ (function () {
-    function RegisterPageModule() {
+var ReviewPageModule = /** @class */ (function () {
+    function ReviewPageModule() {
     }
-    RegisterPageModule = __decorate([
+    ReviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
+                __WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */]),
             ],
         })
-    ], RegisterPageModule);
-    return RegisterPageModule;
+    ], ReviewPageModule);
+    return ReviewPageModule;
 }());
 
-//# sourceMappingURL=register.module.js.map
+//# sourceMappingURL=review.module.js.map
 
 /***/ }),
 
-/***/ 289:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_register_register__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,77 +56,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-var RegisterPage = /** @class */ (function () {
-    function RegisterPage(navCtrl, navParams, reg, loadingCtrl, alertCtrl, storage) {
+var ReviewPage = /** @class */ (function () {
+    function ReviewPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.reg = reg;
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
-        this.storage = storage;
     }
-    RegisterPage.prototype.ionViewDidLoad = function () {
+    ReviewPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ReviewPage');
     };
-    RegisterPage.prototype.loginPage = function () {
-        this.navCtrl.setRoot("LoginPage");
-    };
-    RegisterPage.prototype.userSignup = function () {
-        var _this = this;
-        if (this.fullname !== undefined || this.email !== undefined || this.password !== undefined) {
-            this.showLoading();
-            this.reg.registerUser(this.fullname, this.email, this.password)
-                .subscribe(function (res) {
-                _this.loading.dismiss();
-                if (res.user) {
-                    _this.storage.set('useremail', res.user.email);
-                    _this.navCtrl.setRoot("HomePage");
-                }
-                if (res.error) {
-                    var alert_1 = _this.alertCtrl.create({
-                        title: 'Sign Up Error',
-                        subTitle: res.error,
-                        buttons: ['OK']
-                    });
-                    alert_1.present();
-                }
-            });
-            this.fullname = '';
-            this.password = '';
-            this.email = '';
-        }
-        else {
-            var alert_2 = this.alertCtrl.create({
-                title: 'Sign Up Error',
-                subTitle: 'You cannot submit empty fields',
-                buttons: ['OK']
-            });
-            alert_2.present();
-        }
-    };
-    RegisterPage.prototype.showLoading = function () {
-        this.loading = this.loadingCtrl.create({
-            content: 'Authenticating.....',
-            duration: 3000
-        });
-        this.loading.present();
-    };
-    RegisterPage = __decorate([
+    ReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\register\register.html"*/'<ion-content>\n  <div padding>\n      <div class="logo">\n          <img src="http://placehold.it/50x50">\n        </div>\n        <ion-item>\n          <ion-input type="text"[(ngModel)]="fullname" name ="fullname" placeholder="Fullname"></ion-input>\n          </ion-item>\n      <ion-item>\n        <ion-input type="email"[(ngModel)]="email" name ="email" placeholder="Email"></ion-input>\n        </ion-item>\n      \n        <ion-item>\n        <ion-input type="password" [(ngModel)]="password" name = "password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block class="loginBtn" (click) = "userSignup()">Sign Up</button>\n      <br> \n      <button ion-button block clear class="signup" (click)="loginPage()">Already have an account? Login</button>\n  </div> \n</ion-content>\n '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\register\register.html"*/,
+            selector: 'page-review',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\review\review.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Review</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\review\review.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_register_register__["a" /* RegisterProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
-    ], RegisterPage);
-    return RegisterPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], ReviewPage);
+    return ReviewPage;
 }());
 
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=review.js.map
 
 /***/ })
 

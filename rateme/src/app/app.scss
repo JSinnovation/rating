@@ -14,3 +14,31 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.toolbar-title-md{
+    color: color($colors,graycolor);
+}
+
+.bar-button{
+    color: color($colors,graycolor);
+
+    
+ .sidebarmenu{
+     margin-left: 0px !important;
+ }
+
+ion-title{
+    margin-left: -15px;
+    width: 100% !important;
+    float: left;
+}
+
+.back-button{
+    margin-left: -3px;
+}
+//material design for android
+.toolbar-title-md{
+    margin-left: -5px !important;
+}
+
+}

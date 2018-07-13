@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 280:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompaniesPageModule", function() { return CompaniesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatecompanyPageModule", function() { return CreatecompanyPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createcompany__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CompaniesPageModule = /** @class */ (function () {
-    function CompaniesPageModule() {
+var CreatecompanyPageModule = /** @class */ (function () {
+    function CreatecompanyPageModule() {
     }
-    CompaniesPageModule = __decorate([
+    CreatecompanyPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */]),
             ],
         })
-    ], CompaniesPageModule);
-    return CompaniesPageModule;
+    ], CreatecompanyPageModule);
+    return CreatecompanyPageModule;
 }());
 
-//# sourceMappingURL=companies.module.js.map
+//# sourceMappingURL=createcompany.module.js.map
 
 /***/ }),
 
-/***/ 285:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompaniesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatecompanyPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,38 +58,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CompaniesPage = /** @class */ (function () {
-    function CompaniesPage(navCtrl, navParams, company) {
+var CreatecompanyPage = /** @class */ (function () {
+    function CreatecompanyPage(navCtrl, navParams, company, alertCtrl, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.company = company;
-        this.companies = [];
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
     }
-    CompaniesPage.prototype.ionViewDidLoad = function () {
-        this.getAllCompanies();
+    CreatecompanyPage.prototype.ionViewDidLoad = function () {
     };
-    // new method
-    CompaniesPage.prototype.getAllCompanies = function () {
+    CreatecompanyPage.prototype.ionViewDidEnter = function () {
         var _this = this;
-        this.company.getCompanies()
+        this.company.getUserData()
             .subscribe(function (res) {
-            console.log(res);
-            //res is an array and we are setting it to another array
-            _this.companies = res.result;
+            if (res.user !== null) {
+                _this.userId = res.user._id;
+                console.log(res);
+            }
         });
     };
-    CompaniesPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n<img src="http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.country}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n\n      (4.5)\n      \n    </ion-col>\n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
+    CreatecompanyPage.prototype.register = function () {
+        var _this = this;
+        this.company.createCompany(this.name, this.address, this.city, this.country, this.sector, this.website, this.userId)
+            .subscribe(function (res) {
+            if (res.message) {
+                var toast = _this.toastCtrl.create({
+                    message: res.message,
+                    duration: 3000,
+                    position: 'bottom'
+                });
+                toast.present();
+            }
+            if (res.error) {
+                var alert_1 = _this.alertCtrl.create({
+                    title: 'Error',
+                    subTitle: res.error,
+                    buttons: ['OK']
+                });
+                alert_1.present();
+            }
+        });
+        this.name = '';
+        this.address = '';
+        this.city = '';
+        this.sector = '';
+        this.website = '';
+        this.country = '';
+    };
+    CreatecompanyPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-createcompany',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register Company</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<div ion-fixed style="height:100%; width:100%">\n    <ion-item>\n      <ion-label color="primary" stacked>Company Name</ion-label>\n        <ion-input type="text" [(ngModel)]="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Company Address</ion-label>\n        <ion-input type="text" [(ngModel)]="address"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>City</ion-label>\n        <ion-input type="text" [(ngModel)]="city"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Country</ion-label>\n        <ion-input type="text" [(ngModel)]="country"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Sector</ion-label>\n        <ion-input type="text" [(ngModel)]="sector"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Website</ion-label>\n        <ion-input type="text" [(ngModel)]="website"></ion-input>\n      </ion-item>\n\n      <ion-item class="btnItem">\n        <button ion-button block (click)="register()">Register</button>\n      </ion-item>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
-    ], CompaniesPage);
-    return CompaniesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+    ], CreatecompanyPage);
+    return CreatecompanyPage;
 }());
 
-//# sourceMappingURL=companies.js.map
+//# sourceMappingURL=createcompany.js.map
 
 /***/ })
 
