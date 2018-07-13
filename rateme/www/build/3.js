@@ -56,12 +56,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var HomePage = /** @class */ (function () {
     function HomePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
@@ -78,11 +72,12 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n<h3 class="header1"> Hello, Mark Twain</h3>\n<p class = "text-content1">\n  What would you like to do today?\n\n\n</p>\n<ion-card class="card1">\n<ion-icon name="log-in"></ion-icon>\n<ion-card-header class="header">\n  Add Company\n</ion-card-header>\n<ion-card-content>\n<p class="text-content">\nAdd Company Profile.  Registered employees can give reviews.\n</p>\n<button class="btn1" ion-button block>Add</button>\n</ion-card-content>\n</ion-card>\n\n<ion-card class="card2">\n    <ion-icon name="search"></ion-icon>\n    <ion-card-header class="header">\n      Search\n    </ion-card-header>\n    <ion-card-content>\n    <p class="text-content">\n    Search through our business catalog and find your best partner.\n    </p>\n    <button class="btn2" ion-button block>Search</button>\n    </ion-card-content>\n    </ion-card>\n\n    \n    <ion-card class="card3">\n        <ion-icon name="star"></ion-icon>\n        <ion-card-header class="header">\n          Rate\n        </ion-card-header>\n        <ion-card-content>\n        <p class="text-content">\n        Rate and review other companies and get your company reviewed.\n        </p>\n\n        <button class="btn3" ion-button block (click)="reviewPage()">Rate</button>\n        </ion-card-content>\n        </ion-card>\n        \n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\home\home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar class = "navbar">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n<h3 class="header1"> Hello, Mark Twain</h3>\n<p class = "text-content1">\n  What would you like to do today?\n\n\n</p>\n<ion-card class="card1">\n<ion-icon name="log-in"></ion-icon>\n<ion-card-header class="header">\n  Add Company\n</ion-card-header>\n<ion-card-content>\n<p class="text-content">\nAdd Company Profile.  Registered employees can give reviews.\n</p>\n<button class="btn1" ion-button block>Add</button>\n</ion-card-content>\n</ion-card>\n\n<ion-card class="card2">\n    <ion-icon name="search"></ion-icon>\n    <ion-card-header class="header">\n      Search\n    </ion-card-header>\n    <ion-card-content>\n    <p class="text-content">\n    Search through our business catalog and find your best partner.\n    </p>\n    <button class="btn2" ion-button block>Search</button>\n    </ion-card-content>\n    </ion-card>\n\n    \n    <ion-card class="card3">\n        <ion-icon name="star" ></ion-icon>\n        <ion-card-header class="header">\n          Rate\n        </ion-card-header>\n        <ion-card-content>\n        <p class="text-content">\n        Rate and review other companies and get your company reviewed.\n        </p>\n\n        <button class="btn3" ion-button block (click)="reviewPage()">Rate</button>\n        </ion-card-content>\n        </ion-card>\n        \n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\home\home.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map

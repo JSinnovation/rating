@@ -2,9 +2,7 @@ page-createcompany {
 
        ion-content{
         margin-top: 10px !important;
-       }
-   
-  
+    }
 
     .label-md[stacked] {
         font-size: 1.7rem;
@@ -13,9 +11,10 @@ page-createcompany {
 
     .btnItem .item-inner {
         border: none !important;
-    }
+            }
 
     .item-inner .button {
+        margin: 0px;
         height: 40px;
         font-weight: bold;
         font-size: 20px;
