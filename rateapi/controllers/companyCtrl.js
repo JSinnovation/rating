@@ -11,7 +11,7 @@ exports.createCompany = async (req, res) => {
     req.body.country === '' || req.body.sector === '' || req.body.website === ''){
         return res.status(200).json({error: 'You cannot create company with empty fields'});
     }
-
+    console.log(req.body)
 
     const newCompany = new Company();
     newCompany.companyname = req.body.name;
@@ -20,7 +20,7 @@ exports.createCompany = async (req, res) => {
     newCompany.country = req.body.country;
     newCompany.sector = req.body.sector;
     newCompany.website = req.body.website;
-    newCompany.admin = req.body.userId;
+    newCompany.adminUser = req.body.userId;
   
     const companyData = await newCompany.save();
     

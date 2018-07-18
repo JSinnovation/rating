@@ -24,8 +24,20 @@ return this.http
   }
 
 
+  getUserDataByEmail(email): Observable<any>{
+    return this.http
+    .get(`http://localhost:3000/api/home/${email}`);
+    //backtick is for template strings
+  }
+
+  async getUserEmail() {
+    return await this.storage.get('useremail')
+  }
+
+
 getEmail(){
   this.storage.get('useremail').then(value=> {
+    console.log(value);
     this.email = value;
   });
 }

@@ -36,8 +36,9 @@ this.company.getCompanies()
 }
   
 companyProfile(company){
-  //console.log(company)
-  this.navCtrl.push("companyprofilePage", {"data": company});
+ console.log(company)
+  this.navCtrl.push("CompanyprofilePage", {"data": company});
+  // this.navCtrl.push('CreatecorporationPage')
   }
 }
  

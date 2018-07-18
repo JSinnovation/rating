@@ -11,7 +11,7 @@ export class CompanyprofilePage {
   profile: any;
   user: any;
   
-  constructor(
+  constructor( 
     public navCtrl: NavController, 
     public navParams: NavParams,
     //private alerCtrl: AlertController,

@@ -17,6 +17,8 @@ sector: string;
 website: string;
 userId: any;
 
+userData: any;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -27,7 +29,9 @@ userId: any;
   }
 
   ionViewDidLoad() {
-    
+    this.company.getUserEmail().then(value => {
+      this.GetUserData(value);
+    })
   }
 
    ionViewDidEnter(){
@@ -36,12 +40,19 @@ userId: any;
     
     .subscribe(res=> {
       if(res.user !== null){
-        this.userId = res.user._id;
-        console.log(res)
+        // this.userId = res.user._id;
+        // console.log(res);
         
       }
     });
     
+   }
+
+   GetUserData(email) {
+     this.company.getUserDataByEmail(email).subscribe(res => {
+      this.userId = res.user._id;
+      console.log(res);
+     })
    }
 
   register(){
