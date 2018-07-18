@@ -1,11 +1,11 @@
 page-createcompany {
 
        ion-content{
-        margin-top: 10px !important;
+        margin-top: 5px !important;//changed from 10 to 5
     }
 
     .label-md[stacked] {
-        font-size: 1.7rem;
+        font-size: 1.7 rem;
         font-weight: 500;
     }
 
@@ -17,7 +17,7 @@ page-createcompany {
         margin: 0px;
         height: 40px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 

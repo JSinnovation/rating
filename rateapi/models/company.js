@@ -4,6 +4,8 @@ const companySchema = mongoose.Schema({
     companyname: {type: String},
     address: {type: String, default: ''},
     city: {type: String, default: ''},
+    state: {type: String, default: ''},
+    zipcode: {type: String, default: ''},
     country: {type: String, default: ''},
     sector: {type: String, default: ''},
     website: {type: String, default: ''},

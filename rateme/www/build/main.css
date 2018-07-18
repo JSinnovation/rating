@@ -30657,11 +30657,11 @@ page-companies ion-content .avg {
 }
 
 page-createcompany ion-content {
-  margin-top: 10px !important;
+  margin-top: 5px !important;
 }
 
 page-createcompany .label-md[stacked] {
-  font-size: 1.7rem;
+  font-size: 1.7 rem;
   font-weight: 500;
 }
 
@@ -30673,7 +30673,7 @@ page-createcompany .item-inner .button {
   margin: 0px;
   height: 40px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 page-home ion-content {

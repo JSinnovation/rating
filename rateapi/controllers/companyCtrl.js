@@ -2,13 +2,14 @@ const User = require('../models/user');
 const Company = require('../models/company');
 
 exports.createCompany = async (req, res) => {
-    if(req.body.name === undefined || req.body.address === undefined || req.body.city === undefined ||
-    req.body.country === undefined || req.body.sector === undefined || req.body.website === undefined){
+    if(req.body.name === undefined || req.body.address === undefined ||  req.body.city === undefined ||req.body.state === undefined ||
+        req.body.zipcode === undefined || req.body.country === undefined || req.body.sector === undefined || 
+        req.body.website === undefined){
         return res.status(200).json({error: 'You cannot create company with empty fields'});
     }
 
-    if(req.body.name === '' || req.body.address === '' || req.body.city === '' ||
-    req.body.country === '' || req.body.sector === '' || req.body.website === ''){
+    if(req.body.name === '' || req.body.address === '' || req.body.city === '' ||req.body.state === '' ||
+    req.body.zipcode === '' || req.body.country === '' || req.body.sector === '' || req.body.website === ''){
         return res.status(200).json({error: 'You cannot create company with empty fields'});
     }
     console.log(req.body)
@@ -17,6 +18,8 @@ exports.createCompany = async (req, res) => {
     newCompany.companyname = req.body.name;
     newCompany.address = req.body.address;
     newCompany.city = req.body.city;
+    newCompany.state = req.body.state;
+    newCompany.zipcode = req.body.zipcode;
     newCompany.country = req.body.country;
     newCompany.sector = req.body.sector;
     newCompany.website = req.body.website;

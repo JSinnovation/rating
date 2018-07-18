@@ -12,6 +12,8 @@ export class CreatecompanyPage {
 name: string;
 address: string;
 city: string;
+state: string;
+zipcode: string;
 country: string;
 sector: string;
 website: string;
@@ -56,7 +58,7 @@ userData: any;
    }
 
   register(){
-    this.company.createCompany(this.name, this.address, this.city, this.country, this.sector, this.website, this.userId)
+    this.company.createCompany(this.name, this.address, this.city, this.state, this.zipcode, this.country, this.sector, this.website, this.userId)
     .subscribe(res=> {
     if(res.message){
       let toast = this.toastCtrl.create({
@@ -82,6 +84,8 @@ userData: any;
 this.name =  '';
 this.address = '';
 this.city = '';
+this.state ='';
+this.zipcode = '';
 this.sector = '';
 this.website = '';
 this.country = '';

@@ -44,12 +44,14 @@ getEmail(){
 
 // ? is an optional parameter
 
-  createCompany(name, address, city, country, sector, website, userId?): Observable<any> {
+  createCompany(name, address, city, state, zipcode, country, sector, website, userId?): Observable<any> {
     return this.http
       .post('http://localhost:3000/api/company/create', {
         name,
         address,
         city,
+        state,
+        zipcode,
         country,
         sector,
         website,

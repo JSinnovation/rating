@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 281:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyProfilePageModule", function() { return CompanyProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompaniesPageModule", function() { return CompaniesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companyprofile__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CompanyProfilePageModule = /** @class */ (function () {
-    function CompanyProfilePageModule() {
+var CompaniesPageModule = /** @class */ (function () {
+    function CompaniesPageModule() {
     }
-    CompanyProfilePageModule = __decorate([
+    CompaniesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__companyprofile__["a" /* CompanyprofilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__companyprofile__["a" /* CompanyprofilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */]),
             ],
         })
-    ], CompanyProfilePageModule);
-    return CompanyProfilePageModule;
+    ], CompaniesPageModule);
+    return CompaniesPageModule;
 }());
 
-//# sourceMappingURL=companyprofile.module.js.map
+//# sourceMappingURL=companies.module.js.map
 
 /***/ }),
 
-/***/ 289:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompanyprofilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompaniesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,28 +57,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CompanyprofilePage = /** @class */ (function () {
-    function CompanyprofilePage(navCtrl, navParams) {
+
+var CompaniesPage = /** @class */ (function () {
+    function CompaniesPage(navCtrl, navParams, company) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.profile = this.navParams.get("data");
+        this.company = company;
+        this.companies = [];
     }
-    CompanyprofilePage.prototype.ionViewDidLoad = function () {
+    CompaniesPage.prototype.ionViewDidLoad = function () {
+        this.getAllCompanies();
     };
-    CompanyprofilePage.prototype.ReviewPage = function (profile) {
-        this.navCtrl.push("ReviewPage", { "data": profile });
+    // new method
+    CompaniesPage.prototype.getAllCompanies = function () {
+        var _this = this;
+        this.company.getCompanies()
+            .subscribe(function (res) {
+            //res is an array and we are setting it to another array
+            _this.companies = res.result;
+        });
     };
-    CompanyprofilePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-companyprofile',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companyprofile\companyprofile.html"*/'\n<ion-header>\n    <ion-navbar>\n\n      <ion-row>\n        <ion-col>\n          <ion-title>Profile</ion-title>\n        </ion-col>\n  \n        <ion-col>\n          <button  ion-button icon-end (click)="ReviewPage(profile)">Add Reviews</button>\n        </ion-col>\n      </ion-row>\n  \n    </ion-navbar>\n  \n  </ion-header>\n    \n    \n    <ion-content padding>\n  \n      </ion-content>\n  '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companyprofile\companyprofile.html"*/,
+    CompaniesPage.prototype.companyProfile = function (company) {
+        console.log(company);
+        this.navCtrl.push("CompanyprofilePage", { "data": company });
+        // this.navCtrl.push('CreatecorporationPage')
+    };
+    CompaniesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
+            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n<img src="http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.country}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n      <ion-icon name="star"></ion-icon>\n\n      (4.5)\n      \n    </ion-col>\n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], CompanyprofilePage);
-    return CompanyprofilePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
+    ], CompaniesPage);
+    return CompaniesPage;
 }());
 
-//# sourceMappingURL=companyprofile.js.map
+//# sourceMappingURL=companies.js.map
 
 /***/ })
 

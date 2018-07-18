@@ -1,4 +1,4 @@
-webpackJsonp([8],{
+webpackJsonp([7],{
 
 /***/ 112:
 /***/ (function(module, exports) {
@@ -23,34 +23,30 @@ webpackEmptyAsyncContext.id = 112;
 var map = {
 	"../pages/companies/companies.module": [
 		280,
-		7
+		6
 	],
 	"../pages/companyprofile/companyprofile.module": [
 		281,
-		6
+		5
 	],
 	"../pages/createcompany/createcompany.module": [
 		282,
-		5
-	],
-	"../pages/createcorporation/createcorporation.module": [
-		283,
 		4
 	],
 	"../pages/home/home.module": [
-		284,
+		283,
 		3
 	],
 	"../pages/login/login.module": [
-		285,
+		284,
 		2
 	],
 	"../pages/register/register.module": [
-		286,
+		285,
 		1
 	],
 	"../pages/review/review.module": [
-		287,
+		286,
 		0
 	]
 };
@@ -160,12 +156,15 @@ var CompanyProvider = /** @class */ (function () {
         });
     };
     // ? is an optional parameter
-    CompanyProvider.prototype.createCompany = function (name, address, city, country, sector, website, userId) {
+    CompanyProvider.prototype.createCompany = function (name, address, city, state, zipcode, phone, country, sector, website, userId) {
         return this.http
             .post('http://localhost:3000/api/company/create', {
             name: name,
             address: address,
             city: city,
+            state: state,
+            zipcode: zipcode,
+            phone: phone,
             country: country,
             sector: sector,
             website: website,
@@ -296,7 +295,6 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/companies/companies.module#CompaniesPageModule', name: 'CompaniesPage', segment: 'companies', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/companyprofile/companyprofile.module#CompanyProfilePageModule', name: 'CompanyprofilePage', segment: 'companyprofile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/createcorporation/createcorporation.module#CreatecorporationPageModule', name: 'CreatecorporationPage', segment: 'createcorporation', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
