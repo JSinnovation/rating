@@ -26,7 +26,7 @@ import { CompanyProvider } from '../providers/company/company';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-
+   
      ],
   providers: [
     StatusBar,

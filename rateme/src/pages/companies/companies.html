@@ -9,7 +9,7 @@
 
 <ion-content>
 <!-->angular like a for each loop -->
-<ion-item *ngFor="let company of companies">
+<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">
 <ion-row>
   <ion-col col-2>
 <ion-avatar ion-start>

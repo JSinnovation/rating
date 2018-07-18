@@ -30606,6 +30606,56 @@ page-companies ion-content .avg {
   display: flex !important;
 }
 
+page-companies ion-content ion-avatar img {
+  border-radius: 0px !important;
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+page-companies ion-content .rowCol {
+  margin-top: 3px;
+  height: auto;
+  bottom: -3px !important;
+  padding-bottom: 0px !important;
+  color: #73879C;
+  padding-left: 15px !important;
+}
+
+page-companies ion-content .companyname {
+  width: auto !important;
+  color: #4aa1f3;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px !important;
+}
+
+page-companies ion-content .iconClass.icon-md {
+  padding-left: 5px !important;
+  color: #4aa1f3;
+  margin-left: -3px !important;
+}
+
+page-companies ion-content .dataCol {
+  padding: 0px;
+  margin-top: 4px !important;
+  width: auto !important;
+}
+
+page-companies ion-content .rating {
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-right: 5px !important;
+}
+
+page-companies ion-content .avg {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 page-createcompany ion-content {
   margin-top: 10px !important;
 }
@@ -30814,4 +30864,34 @@ page-register ion-content .item-inner {
 
 page-register ion-content .signup {
   color: white !important;
+}
+
+page-review .label-md[stacked] {
+  font-size: 1.7rem;
+  font-weight: 500;
+  float: left;
+}
+
+page-review ion-range {
+  padding: 0px !important;
+}
+
+page-review .item-inner {
+  border: none !important;
+}
+
+page-review .item-inner .button {
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+page-review ion-textarea {
+  border: 1px solid #4aa1f3;
+  height: 100px;
+  padding-top: 0px !important;
+}
+
+page-review .grid .label-md {
+  padding-left: 10px;
 }

@@ -6,13 +6,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-review',
   templateUrl: 'review.html',
 })
+
 export class ReviewPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  culture:number;
+  benefits:number;
+  balance:number;
+  speed:number;
+  overall:number;
+  review:string;
+  
 
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+  ) {
+  }
+ 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ReviewPage');
+    //this.getData()
   }
 
-}
+  addReview(){
+
+
+  }
+    //console.log('ionViewDidLoad ReviewPage');
+  }
+
+

@@ -8,5 +8,5 @@ router.post('/signup/user', UserCtrl.createUser);
 router.post('/login/user', UserCtrl.loginUser);
 
 
-module.exports = router;
+module.exports = router; 
  

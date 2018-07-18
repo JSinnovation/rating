@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ 112:
 /***/ (function(module, exports) {
@@ -23,26 +23,30 @@ webpackEmptyAsyncContext.id = 112;
 var map = {
 	"../pages/companies/companies.module": [
 		280,
+		6
+	],
+	"../pages/companyprofile/companyprofile.module": [
+		281,
 		5
 	],
 	"../pages/createcompany/createcompany.module": [
-		281,
+		282,
 		4
 	],
 	"../pages/home/home.module": [
-		282,
+		283,
 		3
 	],
 	"../pages/login/login.module": [
-		283,
+		284,
 		2
 	],
 	"../pages/register/register.module": [
-		284,
+		285,
 		1
 	],
 	"../pages/review/review.module": [
-		285,
+		286,
 		0
 	]
 };
@@ -235,6 +239,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/companies/companies.module#CompaniesPageModule', name: 'CompaniesPage', segment: 'companies', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/companyprofile/companyprofile.module#CompanyProfilePageModule', name: 'CompanyprofilePage', segment: 'companyprofile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },

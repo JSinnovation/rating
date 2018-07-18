@@ -29,12 +29,15 @@ getAllCompanies(){
 this.company.getCompanies()
 //we subscribe because it has an observable
 .subscribe(res => {
-  console.log(res)
 //res is an array and we are setting it to another array
   this.companies = res.result
 })
 
-
 }
   
+companyProfile(company){
+  //console.log(company)
+  this.navCtrl.push("companyprofilePage", {"data": company});
+  }
 }
+ 
