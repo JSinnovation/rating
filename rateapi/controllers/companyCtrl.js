@@ -25,40 +25,44 @@ exports.createCompany = async (req, res) => {
     newCompany.website = req.body.website;
     newCompany.adminUser = req.body.userId;
   
-    const companyData = await newCompany.save();
-    
+    const company = await newCompany.save()
+    //const companyData = await newCompany.save();
+    /* 
     await User.update({
         '_id': req.body.userId
     }, {
         $push: {companies: {
             company: companyData._id
         }}
-    });
+    }); */
     
-    return res.status(200).json({message: 'Company created successfully'});
+    return res.status(500).json({message: 'Company created successfully'});
 }
 
 exports.getAllCompanies = async (req, res) => { //request response
     const results = await Company.find({}) //empty to return all documents in the collection
-                            .populate("rating.user");
+                            .populate("rating.user");//passing in rating.user replacing ID with the complete user data
+                            //use password as the key and then set its value to 0 to exclude the password
 
     return res.status(200).json({result: results});
 }
 
 exports.addReview = async (req, res) => {
+    
     if(req.body.culture === '' || req.body.benefits === '' || req.body.balance === '' 
     || req.body.speed === '' || req.body.review == '' || req.body.overall === ''){
-        return res.status(200).json({error: 'No empty fields allowed'});
+        return res.status(500).json({error: 'No empty fields allowed'});
     }
 
     if(req.body.culture === undefined || req.body.benefits === undefined || req.body.balance === undefined 
     || req.body.speed === undefined || req.body.review == undefined || req.body.overall === undefined){
-        return res.status(200).json({error: 'No empty fields allowed'});
-    }
+        return res.status(500).json({error: 'No empty fields allowed'});
+    } 
 
-    const company = await Company.update({
+     const company = await Company.update({
         "_id": req.body.companyId
     }, {
+        //rating is the name of the field
         $push: {rating: {
             user: req.body.userId,
             culture: req.body.culture,
@@ -75,11 +79,14 @@ exports.addReview = async (req, res) => {
             speedTotal: req.body.speed
         },
         $inc: {totalStars: req.body.overall}
-    });
+       
+    }); 
 
-    return res.status(200).json({message: 'Review added successfully'});
+   return res.status(200).json({message: 'Review added successfully'});
+      
 }
 
+/*
 exports.addEmployee = async (req, res) => {
     await Company.update({
         '_id': req.body.company._id,
@@ -115,8 +122,8 @@ exports.leaderBoard = async (req, res) => {
     const results = await Company.find({})
                         .sort({"totalStars": -1});
 
-    return res.status(200).json({result: results});
-}
+    return res.status(200).json({result: results}); */
+
 
 
 

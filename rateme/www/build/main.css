@@ -30538,24 +30538,38 @@ ion-navbar.toolbar {
   color: #73879C;
 }
 
-.bar-button .sidebarmenu {
+.sidebarmenu {
   margin-left: 0px !important;
 }
 
-.bar-button ion-title {
+ion-title {
   margin-left: -15px;
   width: 100% !important;
   float: left;
 }
 
-.bar-button .back-button {
+.back-button {
   margin-left: -3px;
 }
 
-.bar-button .toolbar-title-md {
+.toolbar-title-md {
   margin-left: -5px !important;
 }
 
+ul {
+  padding: 0px;
+}
+
+ul.rating li {
+  padding: 5px 10px !important;
+  background: none;
+  color: #ffb400;
+}
+
+ul.rating li ion-icon {
+  font-size: 15px;
+}
+
 page-companies ion-content ion-avatar img {
   border-radius: 0px !important;
   width: 50px !important;
@@ -30606,54 +30620,192 @@ page-companies ion-content .avg {
   display: flex !important;
 }
 
-page-companies ion-content ion-avatar img {
-  border-radius: 0px !important;
-  width: 50px !important;
-  height: 50px !important;
-  max-width: 100px;
-  max-height: 100px;
+page-companyprofile ion-title {
+  margin-top: 8px;
+  margin-left: -20px;
 }
 
-page-companies ion-content .rowCol {
-  margin-top: 3px;
-  height: auto;
-  bottom: -3px !important;
-  padding-bottom: 0px !important;
-  color: #73879C;
-  padding-left: 15px !important;
+page-companyprofile .review {
+  background: inherit !important;
+  border: 1px solid white;
+  color: white;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 6px;
 }
 
-page-companies ion-content .companyname {
-  width: auto !important;
-  color: #4aa1f3;
-  font-weight: bold;
-  font-size: 18px;
-  padding-left: 5px !important;
+page-companyprofile ion-content {
+  background: linear-gradient(48deg, rgba(70, 150, 204, 0.8) 0%, rgba(157, 72, 173, 0.86) 28%, rgba(0, 168, 168, 0.98) 93%, #00a8a8 100%);
+  color: #f4f4f4;
 }
 
-page-companies ion-content .iconClass.icon-md {
-  padding-left: 5px !important;
-  color: #4aa1f3;
-  margin-left: -3px !important;
-}
-
-page-companies ion-content .dataCol {
-  padding: 0px;
-  margin-top: 4px !important;
-  width: auto !important;
-}
-
-page-companies ion-content .rating {
-  padding: 0px !important;
-  margin: 0px !important;
-  margin-right: 5px !important;
-}
-
-page-companies ion-content .avg {
+page-companyprofile ion-content span.spanBtn {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+page-companyprofile ion-content .btn1 {
+  width: 100%;
+  margin-bottom: 20px !important;
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+page-companyprofile ion-content .btn2 {
+  width: 100%;
+  margin: 0 auto !important;
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+page-companyprofile ion-content .card1 {
+  border: none !important;
+  border-radius: 5%;
+  background: rgba(241, 140, 72, 0.781);
+  height: 150px;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  color: #f4f4f4;
+}
+
+page-companyprofile ion-content .card-title {
+  color: #f4f4f4;
+  font-weight: 600;
+  padding-top: 0px;
+  margin-left: 15px !important;
+}
+
+page-companyprofile ion-content .pCity {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+}
+
+page-companyprofile ion-content .pSector {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+}
+
+page-companyprofile ion-content .pSite {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+}
+
+page-companyprofile ion-content span.pSpan {
+  margin-top: -20px !important;
+}
+
+page-companyprofile ion-content .iconClass.icon-md {
+  padding-right: 5px !important;
+  color: #4aa1f3;
+  margin-left: -3px !important;
+}
+
+page-companyprofile ion-content .card2 {
+  border: none !important;
+  border-radius: 5%;
+  background: rgba(70, 224, 204, 0.8);
+  height: auto !important;
+  margin-bottom: 20px !important;
+}
+
+page-companyprofile ion-content .pRow {
+  width: 100%;
+}
+
+page-companyprofile ion-content .pRow p {
+  font-size: 20px;
+  text-align: center !important;
+  font-weight: 500;
+  margin: 0 auto;
+  color: white !important;
+}
+
+page-companyprofile ion-content .pRow1 {
+  width: 100%;
+}
+
+page-companyprofile ion-content .pRow1 p {
+  font-size: 20px;
+  text-align: center !important;
+  font-weight: 500;
+  margin: 0 auto;
+  color: white !important;
+}
+
+page-companyprofile ion-content .pRow2 {
+  width: 100%;
+}
+
+page-companyprofile ion-content .pRow2 span {
+  font-size: 20px;
+  text-align: center !important;
+  font-weight: 500;
+  margin: 0 auto;
+  color: white !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+page-companyprofile ion-content .avg {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 100%;
+}
+
+page-companyprofile ion-content .avg p {
+  width: 100%;
+  padding-left: 5px !important;
+  height: 20px !important;
+  width: auto;
+  margin-top: 25px;
+  color: white;
+  text-align: left !important;
+}
+
+page-companyprofile ion-content ratings {
+  text-align: center !important;
+  margin: 0 auto;
+  width: 50%;
+  padding: 0px !important;
+  height: 50px;
+}
+
+page-companyprofile ion-content .pText2 {
+  width: 100%;
+}
+
+page-companyprofile ion-content .pText2 p {
+  font-size: 22px;
+  text-align: center !important;
+  margin: 0 auto;
+  color: white !important;
+}
+
+page-companyprofile ion-content .card3 {
+  border: none !important;
+  border-radius: 5%;
+  background: rgba(97, 204, 70, 0.8);
+  height: auto;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  color: #f4f4f4;
+}
+
+page-companyprofile ion-content .col1 {
+  padding-top: 13px;
+  font-weight: 600;
+}
+
+page-companyprofile ion-content .col2 {
+  width: 50%;
+  padding: 0px !important;
 }
 
 page-createcompany ion-content {
@@ -30894,4 +31046,63 @@ page-review ion-textarea {
 
 page-review .grid .label-md {
   padding-left: 10px;
+}
+
+page-viewreviews ion-content ion-avatar img {
+  border-radius: 0px !important;
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+page-viewreviews ion-content .rowCol {
+  margin-top: 3px;
+  height: auto;
+  bottom: -3px !important;
+  padding-bottom: 0px !important;
+  color: #73879C;
+  padding-left: 15px !important;
+}
+
+page-viewreviews ion-content .my-row {
+  margin-bottom: 0px !important;
+}
+
+page-viewreviews ion-content .companyname {
+  width: auto !important;
+  color: #4aa1f3;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: -10px !important;
+}
+
+page-viewreviews ion-content .dataCol {
+  padding: 0px;
+  margin-top: 4px;
+  float: left;
+  width: auto !important;
+}
+
+page-viewreviews ion-content .dataCol .time {
+  margin-left: -3px !important;
+  margin-top: 0px !important;
+}
+
+page-viewreviews ion-content .iconClass.icon-md {
+  padding-right: 5px !important;
+  color: #4aa1f3;
+  margin-left: -3px !important;
+}
+
+page-viewreviews ion-content .rating {
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-right: 5px !important;
+}
+
+page-viewreviews ion-content .avg p {
+  padding-bottom: 3px !important;
+  padding-top: 3px !important;
+  color: #73879C;
 }

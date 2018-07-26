@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Reviews</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <!-->angular like a for each loop -->
+  <ion-item *ngFor="let rating of company.rating">
+  <ion-row>
+    <ion-col col-2>
+  <ion-avatar ion-start>
+  <img src="http://placehold.it/10x10">
+  </ion-avatar>
+  </ion-col>
+  <!--grid width in ionic is 12 just like Bootstrap-->
+  
+  <ion-col col-10 class="rowCol">
+  <h2 class = "companyname" text-wrap>
+    {{rating.user.fullname}}
+  </h2>
+  
+  <ion-col class="dataCol">
+    <ion-row>
+      <ion-col col-12 text-wrap> 
+  <span>
+   
+    {{rating.created}}
+  </span>
+      </ion-col>
+      
+      <ion-col col-12 class = "rating">
+     <span class="avg">  
+         <newrating [ratingnumber]="rating.userOverall"></newrating>
+     <p>
+        {{rating.review}}
+
+     </p>
+
+     </span>
+  
+   
+      </ion-col>     
+      
+    </ion-row>
+  </ion-col>
+  
+    </ion-col>
+  
+  </ion-row>
+  </ion-item>
+  </ion-content>
+  

@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 282:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatecompanyPageModule", function() { return CreatecompanyPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createcompany__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(300);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CreatecompanyPageModule = /** @class */ (function () {
-    function CreatecompanyPageModule() {
+var RegisterPageModule = /** @class */ (function () {
+    function RegisterPageModule() {
     }
-    CreatecompanyPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+    RegisterPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */],
+                __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
             ],
         })
-    ], CreatecompanyPageModule);
-    return CreatecompanyPageModule;
+    ], RegisterPageModule);
+    return RegisterPageModule;
 }());
 
-//# sourceMappingURL=createcompany.module.js.map
+//# sourceMappingURL=register.module.js.map
 
 /***/ }),
 
-/***/ 289:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatecompanyPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_register_register__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,81 +59,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CreatecompanyPage = /** @class */ (function () {
-    function CreatecompanyPage(navCtrl, navParams, company, alertCtrl, toastCtrl) {
+
+var RegisterPage = /** @class */ (function () {
+    function RegisterPage(navCtrl, navParams, reg, loadingCtrl, alertCtrl, storage) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.company = company;
+        this.reg = reg;
+        this.loadingCtrl = loadingCtrl;
         this.alertCtrl = alertCtrl;
-        this.toastCtrl = toastCtrl;
+        this.storage = storage;
     }
-    CreatecompanyPage.prototype.ionViewDidLoad = function () {
+    RegisterPage.prototype.ionViewDidLoad = function () {
+    };
+    RegisterPage.prototype.loginPage = function () {
+        this.navCtrl.setRoot("LoginPage");
+    };
+    RegisterPage.prototype.userSignup = function () {
         var _this = this;
-        this.company.getUserEmail().then(function (value) {
-            _this.GetUserData(value);
-        });
+        if (this.fullname !== undefined || this.email !== undefined || this.password !== undefined) {
+            this.showLoading();
+            this.reg.registerUser(this.fullname, this.email, this.password)
+                .subscribe(function (res) {
+                _this.loading.dismiss();
+                if (res.user) {
+                    _this.storage.set('useremail', res.user.email);
+                    _this.navCtrl.setRoot("HomePage");
+                }
+                if (res.error) {
+                    var alert_1 = _this.alertCtrl.create({
+                        title: 'Sign Up Error',
+                        subTitle: res.error,
+                        buttons: ['OK']
+                    });
+                    alert_1.present();
+                }
+            });
+            this.fullname = '';
+            this.password = '';
+            this.email = '';
+        }
+        else {
+            var alert_2 = this.alertCtrl.create({
+                title: 'Sign Up Error',
+                subTitle: 'You cannot submit empty fields',
+                buttons: ['OK']
+            });
+            alert_2.present();
+        }
     };
-    CreatecompanyPage.prototype.ionViewDidEnter = function () {
-        this.company.getUserData()
-            .subscribe(function (res) {
-            if (res.user !== null) {
-                // this.userId = res.user._id;
-                // console.log(res);
-            }
+    RegisterPage.prototype.showLoading = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Authenticating.....',
+            duration: 3000
         });
+        this.loading.present();
     };
-    CreatecompanyPage.prototype.GetUserData = function (email) {
-        var _this = this;
-        this.company.getUserDataByEmail(email).subscribe(function (res) {
-            _this.userId = res.user._id;
-            console.log(res);
-        });
-    };
-    CreatecompanyPage.prototype.register = function () {
-        var _this = this;
-        this.company.createCompany(this.name, this.address, this.city, this.state, this.zipcode, this.phone, this.country, this.sector, this.website, this.userId)
-            .subscribe(function (res) {
-            if (res.message) {
-                var toast = _this.toastCtrl.create({
-                    message: res.message,
-                    duration: 3000,
-                    position: 'bottom'
-                });
-                toast.present();
-            }
-            if (res.error) {
-                var alert_1 = _this.alertCtrl.create({
-                    title: 'Error',
-                    subTitle: res.error,
-                    buttons: ['OK']
-                });
-                alert_1.present();
-            }
-        });
-        this.name = '';
-        this.address = '';
-        this.city = '';
-        this.state = '';
-        this.zipcode = '';
-        this.phone = '';
-        this.sector = '';
-        this.website = '';
-        this.country = '';
-    };
-    CreatecompanyPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-createcompany',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register Company</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<div ion-fixed style="height:100%; width:100%">\n    <ion-item>\n      <ion-label color="primary" stacked>Company Name</ion-label>\n        <ion-input type="text" [(ngModel)]="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Company Address</ion-label>\n        <ion-input type="text" [(ngModel)]="address"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>City</ion-label>\n        <ion-input type="text" [(ngModel)]="city"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>State</ion-label>\n        <ion-input type="text" [(ngModel)]="state"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Zipcode</ion-label>\n        <ion-input type="text" [(ngModel)]="zipcode"></ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-label color="primary" stacked>Country</ion-label>\n        <ion-input type="text" [(ngModel)]="country"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Sector</ion-label>\n        <ion-input type="text" [(ngModel)]="sector"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Website</ion-label>\n        <ion-input type="text" [(ngModel)]="website"></ion-input>\n      </ion-item>\n\n      <ion-item class="btnItem">\n        <button ion-button block (click)="register()">Register</button>\n      </ion-item>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/,
+    RegisterPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-register',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\register\register.html"*/'<ion-content>\n  <div padding ion-fixed style="height:100%; width:100%">\n      <div class="logo">\n          <img src="http://placehold.it/50x50">\n        </div>\n        <ion-item>\n          <ion-input type="text"[(ngModel)]="fullname" name ="fullname" placeholder="Fullname"></ion-input>\n          </ion-item>\n      <ion-item>\n        <ion-input type="email"[(ngModel)]="email" name ="email" placeholder="Email"></ion-input>\n        </ion-item>\n      \n        <ion-item>\n        <ion-input type="password" [(ngModel)]="password" name = "password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block class="loginBtn" (click) = "userSignup()">Sign Up</button>\n      <br> \n      <button ion-button block clear class="signup" (click)="loginPage()">Already have an account? Login</button>\n  </div> \n</ion-content>\n '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\register\register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_register_register__["a" /* RegisterProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
-    ], CreatecompanyPage);
-    return CreatecompanyPage;
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
+    ], RegisterPage);
+    return RegisterPage;
 }());
 
-//# sourceMappingURL=createcompany.js.map
+//# sourceMappingURL=register.js.map
 
 /***/ })
 

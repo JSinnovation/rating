@@ -12,6 +12,7 @@ const companySchema = mongoose.Schema({
     adminUser: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     imageId: {type: String, default: ''},
     imageVersion: {type: String, default: ''},
+    //below the values in the rating array are KEYS
     rating: [{
         user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
         culture: {type: Number, default: 0},
@@ -28,9 +29,9 @@ const companySchema = mongoose.Schema({
     benefitsTotal: [Number],
     balanceTotal: [Number],
     speedTotal: [Number],
-    employees: [{
-        employee: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-    }]
+   // employees: [{
+      //  employee: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+   // }]
 });
 
 module.exports = mongoose.model('Company', companySchema);

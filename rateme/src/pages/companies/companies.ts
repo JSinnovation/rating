@@ -1,7 +1,7 @@
 import { CompanyProvider } from '../../providers/company/company';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import * as _ from 'lodash';
 
 @IonicPage()
 @Component({
@@ -11,6 +11,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CompaniesPage {
 
 companies = [];
+rating: number; 
 
   constructor(
     public navCtrl: NavController, 
@@ -40,5 +41,15 @@ companyProfile(company){
   this.navCtrl.push("CompanyprofilePage", {"data": company});
   // this.navCtrl.push('CreatecorporationPage')
   }
+
+  averageRating(number){
+if(number.length <= 0){
+  this.rating = number.length;
+}else{
+  this.rating= _.mean(number)
 }
+return this.rating
+}
+  }
+
  

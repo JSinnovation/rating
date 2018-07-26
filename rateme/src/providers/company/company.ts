@@ -1,3 +1,4 @@
+import {Platform} from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,8 +12,13 @@ export class CompanyProvider {
   email: any;
  
   constructor(
-    public http: HttpClient,  private storage:Storage) {
-        
+    public http: HttpClient,  
+    private storage:Storage, 
+    private platform:Platform
+  ) {
+        this.platform.ready().then(() => {
+          this.getEmail();
+        });
   }
 
   // Here we call getEmail
@@ -62,6 +68,29 @@ getCompanies(): Observable<any>{
   return this.http
 .get('http://localhost:3000/api/companies/all');
 }
+//method
+addCompanyReview(companyId, culture, benefits, balance, speed, overall, review, userId):Observable<any>{
+  return this.http 
+  .post('http://localhost:3000/api/company/review', {
+companyId,
+culture,
+benefits,
+balance,
+speed,
+overall,
+review,
+userId
+});
+}
+
+registerEmployee(company, user, role): Observable<any>{
+  return this.http
+    .post('https://ratingapi.herokuapp.com/api/register/employee', {
+      company: company,
+      user: user,
+      role: role
+    });
+  }
 }
 
 
