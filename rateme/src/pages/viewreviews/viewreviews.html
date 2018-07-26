@@ -5,7 +5,8 @@
 
 </ion-header>
 
-<ion-content>
+<!--if the company data has not yet been reteived, *ngIf will hide the ion-content-->
+  <ion-content *ngIf="company">
   <!-->angular like a for each loop -->
   <ion-item *ngFor="let rating of company.rating">
   <ion-row>

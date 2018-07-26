@@ -15,7 +15,7 @@ export class ViewreviewsPage {
   }
 
   ionViewDidLoad() {
-    
+  
   }
   averageRating(arr){
 if(arr.length<=0){

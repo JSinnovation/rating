@@ -162,7 +162,7 @@ var CompanyProvider = /** @class */ (function () {
     CompanyProvider.prototype.getEmail = function () {
         var _this = this;
         this.storage.get('useremail').then(function (value) {
-            console.log(value);
+            //console.log(value);
             _this.email = value;
         });
     };
@@ -209,11 +209,10 @@ var CompanyProvider = /** @class */ (function () {
     };
     CompanyProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */]) === "function" && _c || Object])
     ], CompanyProvider);
     return CompanyProvider;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=company.js.map

@@ -43,7 +43,7 @@ return this.http
 
 getEmail(){
   this.storage.get('useremail').then(value=> {
-    console.log(value);
+    //console.log(value);
     this.email = value;
   });
 }
