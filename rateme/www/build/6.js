@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 281:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(422);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var HomePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 294:
+/***/ 422:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,10 +74,9 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar class = "navbar">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n<h3 class="header1"> Hello, Mark Twain</h3>\n<p class = "text-content1">\n  What would you like to do today?\n\n\n</p>\n<ion-card class="card1">\n<ion-icon name="log-in"></ion-icon>\n<ion-card-header class="header">\n  Add Company\n</ion-card-header>\n<ion-card-content>\n<p class="text-content">\nAdd Company Profile.  Registered employees can give reviews.\n</p>\n<button class="btn1" ion-button block>Add</button>\n</ion-card-content>\n</ion-card>\n\n<ion-card class="card2">\n    <ion-icon name="search"></ion-icon>\n    <ion-card-header class="header">\n      Search\n    </ion-card-header>\n    <ion-card-content>\n    <p class="text-content">\n    Search through our business catalog and find your best partner.\n    </p>\n    <button class="btn2" ion-button block>Search</button>\n    </ion-card-content>\n    </ion-card>\n\n    \n    <ion-card class="card3">\n        <ion-icon name="star" ></ion-icon>\n        <ion-card-header class="header">\n          Rate\n        </ion-card-header>\n        <ion-card-content>\n        <p class="text-content">\n        Rate and review other companies and get your company reviewed.\n        </p>\n\n        <button class="btn3" ion-button block (click)="reviewPage()">Rate</button>\n        </ion-card-content>\n        </ion-card>\n        \n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\home\home.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], HomePage);
     return HomePage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map

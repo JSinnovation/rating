@@ -54,7 +54,7 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$toolbar-md-title-text-color: color($colors,light);
 
 
 
@@ -72,7 +72,7 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+//@import "ionic.theme.default"; was erroring and so commented on 7/26/2018
 
 
 // Ionicons

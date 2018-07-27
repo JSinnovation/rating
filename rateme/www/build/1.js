@@ -1,15 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 280:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompaniesPageModule", function() { return CompaniesPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__ = __webpack_require__(291);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyProfilePageModule", function() { return CompanyProfilePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__companyprofile__ = __webpack_require__(420);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,28 +20,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CompaniesPageModule = /** @class */ (function () {
-    function CompaniesPageModule() {
+__WEBPACK_IMPORTED_MODULE_0__components_components_module__["a" /* ComponentsModule */];
+var CompanyProfilePageModule = /** @class */ (function () {
+    function CompanyProfilePageModule() {
     }
-    CompaniesPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+    CompanyProfilePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */],
+                __WEBPACK_IMPORTED_MODULE_3__companyprofile__["a" /* CompanyprofilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__["a" /* Ionic2RatingModule */]
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__companyprofile__["a" /* CompanyprofilePage */]),
+                __WEBPACK_IMPORTED_MODULE_0__components_components_module__["a" /* ComponentsModule */]
             ],
         })
-    ], CompaniesPageModule);
-    return CompaniesPageModule;
+    ], CompanyProfilePageModule);
+    return CompanyProfilePageModule;
 }());
 
-//# sourceMappingURL=companies.module.js.map
+//# sourceMappingURL=companyprofile.module.js.map
 
 /***/ }),
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -225,7 +226,36 @@ var Ionic2Rating = (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ 291:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17339,42 +17369,13 @@ var Ionic2Rating = (function () {
 
 /***/ }),
 
-/***/ 290:
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ 291:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(293);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(289);
 /* unused harmony reexport Ionic2Rating */
 
 
@@ -17382,7 +17383,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17390,7 +17391,7 @@ module.exports = function(module) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(289);
 
 
 
@@ -17423,15 +17424,93 @@ var Ionic2RatingModule = (function () {
 
 /***/ }),
 
-/***/ 293:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompaniesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic2_rating__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newrating_newrating__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__node_modules_angular_forms__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ComponentsModule = /** @class */ (function () {
+    function ComponentsModule() {
+    }
+    ComponentsModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__newrating_newrating__["a" /* NewratingComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_0_ionic2_rating__["a" /* Ionic2RatingModule */], __WEBPACK_IMPORTED_MODULE_3__node_modules_angular_forms__["a" /* FormsModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__newrating_newrating__["a" /* NewratingComponent */]]
+        })
+    ], ComponentsModule);
+    return ComponentsModule;
+}());
+
+//# sourceMappingURL=components.module.js.map
+
+/***/ }),
+
+/***/ 295:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewratingComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the NewratingComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var NewratingComponent = /** @class */ (function () {
+    function NewratingComponent() {
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Number)
+    ], NewratingComponent.prototype, "ratingnumber", void 0);
+    NewratingComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'newrating',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\components\newrating\newrating.html"*/'<rating [(ngModel)] = "ratingnumber"\nreadOnly="true" \nmax="5" \nemptyStarIconName="star-outline" \nhalfStarIconName="star-half" \nstarIconName="star" \nnullable="false"> \n</rating>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\components\newrating\newrating.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], NewratingComponent);
+    return NewratingComponent;
+}());
+
+//# sourceMappingURL=newrating.js.map
+
+/***/ }),
+
+/***/ 420:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompanyprofilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -17446,51 +17525,98 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CompaniesPage = /** @class */ (function () {
-    function CompaniesPage(navCtrl, navParams, company) {
+var CompanyprofilePage = /** @class */ (function () {
+    function CompanyprofilePage(navCtrl, navParams, alerCtrl, company, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alerCtrl = alerCtrl;
         this.company = company;
-        this.companies = [];
+        this.toastCtrl = toastCtrl;
+        this.profile = this.navParams.get("data");
     }
-    CompaniesPage.prototype.ionViewDidLoad = function () {
-        this.getAllCompanies();
-    };
-    // new method
-    CompaniesPage.prototype.getAllCompanies = function () {
+    CompanyprofilePage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.company.getCompanies()
+        this.company.getUserData()
             .subscribe(function (res) {
-            //res is an array and we are setting it to another array
-            _this.companies = res.result;
+            _this.user = res.user;
         });
     };
-    CompaniesPage.prototype.companyProfile = function (company) {
-        console.log(company);
-        this.navCtrl.push("CompanyprofilePage", { "data": company });
-        // this.navCtrl.push('CreatecorporationPage')
+    CompanyprofilePage.prototype.reviewPage = function (profile) {
+        this.navCtrl.push("ReviewPage", { "data": profile });
     };
-    CompaniesPage.prototype.averageRating = function (number) {
-        if (number.length <= 0) {
-            this.rating = number.length;
+    CompanyprofilePage.prototype.viewReviews = function (profile) {
+        this.navCtrl.push("ViewreviewsPage", { "companyData": profile });
+    };
+    CompanyprofilePage.prototype.averageRating = function (arr) {
+        if (arr.length <= 0) {
+            return arr.length;
         }
         else {
-            this.rating = __WEBPACK_IMPORTED_MODULE_3_lodash__["mean"](number);
+            return this.roundValue(__WEBPACK_IMPORTED_MODULE_3_lodash__["mean"](arr));
         }
-        return this.rating;
     };
-    CompaniesPage = __decorate([
+    CompanyprofilePage.prototype.roundValue = function (value) {
+        var factor = Math.pow(10, 1);
+        return Math.round(value * factor) / factor;
+    };
+    CompanyprofilePage.prototype.ratingSum = function (arr) {
+        if (arr.length <= 0) {
+            return arr.length;
+        }
+        else {
+            return __WEBPACK_IMPORTED_MODULE_3_lodash__["sum"](arr);
+        }
+    };
+    CompanyprofilePage.prototype.employeeRegister = function (profile) {
+        var _this = this;
+        var alert = this.alerCtrl.create({
+            title: 'Register as an employee',
+            inputs: [
+                {
+                    name: 'role',
+                    placeholder: 'Add Role'
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel'
+                },
+                {
+                    text: 'Add',
+                    cssClass: 'alertCss',
+                    handler: function (data) {
+                        _this.company.registerEmployee(profile, _this.user, data.role)
+                            .subscribe(function (res) {
+                            if (res.message) {
+                                var toast = _this.toastCtrl.create({
+                                    message: res.message,
+                                    duration: 3000,
+                                    position: "bottom"
+                                });
+                                toast.present();
+                            }
+                        });
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    CompanyprofilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n<img src="http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.state}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n   <span class="avg">  \n      <rating [ngModel]="averageRating(company.ratingOverall)"\n      readOnly="true" \n      max="5" \n      emptyStarIconName="star-outline" \n      halfStarIconName="star-half" \n      starIconName="star" \n      nullable="false"> \n    </rating>\n\n   ({{averageRating(company.ratingOverall)}})\n   </span>\n\n \n    </ion-col>     \n    \n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
+            selector: 'page-companyprofile',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companyprofile\companyprofile.html"*/'<ion-header no-border>\n    <ion-navbar transparent>\n      <ion-row>\n        <ion-col>\n          <ion-title>Profile</ion-title>\n        </ion-col>\n  \n        <ion-col>\n          <button class="review" ion-button icon-end outline (click)="viewReviews(profile)">Reviews</button>\n          <!--profile is the Company Data-->\n        </ion-col>\n      </ion-row>\n  \n    </ion-navbar>\n  \n  </ion-header>\n    \n    \n    <ion-content padding>\n      <span>\n        <button ion-button block class="btn1" (click)="reviewPage(profile)">Write Reviews</button>\n      </span>\n      <span>\n        <button ion-button block class="btn2" (click)="employeeRegister(profile)">Register as an Employee</button>\n      </span>\n    \n      <ion-card class="card1">\n        <ion-card-content>\n          <ion-card-title>\n            {{ profile.companyname }}\n          </ion-card-title>\n    \n          <p class="pCity">\n            <ion-icon name="pin" class="iconClass"></ion-icon>\n            <span class="pSpan">\n              {{profile.city}}, {{profile.country}}\n            </span>\n          </p>\n    \n          <p class="pSector">\n            <ion-icon name="archive" class="iconClass"></ion-icon>\n            {{profile.sector}}\n          </p>\n    \n          <p class="pSite">\n            <ion-icon name="ios-link" class="iconClass"></ion-icon>\n            {{profile.website}}\n          </p>\n        </ion-card-content>\n      </ion-card>\n    \n    \n      <ion-card class="card2">\n          <ion-card-content>\n              <ion-row>\n                <ion-col>\n                  <ion-row class="pRow">\n                    <p>{{profile.rating.length}} ratings received</p>\n                  </ion-row>\n                </ion-col>\n              </ion-row>\n    \n              <ion-row>\n                <ion-col>\n                  <ion-row class="pRow1">\n                    <p>{{ratingSum(profile.ratingOverall)}} Total Stars</p>\n                  </ion-row>\n                </ion-col>\n              </ion-row>\n    \n              <ion-row>\n                <ion-col>\n                  <ion-row class="pRow2">\n                    <span class="avg">\n                       <newrating [ratingnumber]="averageRating(profile.ratingOverall)"></newrating> \n                      <p>({{averageRating(profile.ratingOverall)}})</p>\n                    </span>\n                  </ion-row>\n              \n                  <ion-row class="pText2">\n                    <p>Based on {{profile.rating.length}} rating(s)</p>\n                  </ion-row>\n    \n                </ion-col>\n              </ion-row>\n    \n          </ion-card-content>\n        </ion-card>\n    \n        <ion-card class="card3">\n          <ion-card-content>\n            <ion-row>\n              <ion-col class="col1">\n                Culture and Values\n              </ion-col>\n              <ion-col class="col2">\n                <newrating [ratingnumber]="averageRating(profile.cultureTotal)"></newrating>\n              </ion-col>\n            </ion-row>\n            <ion-row>\n              <ion-col class="col1">\n                Compensation\n              </ion-col>\n              <ion-col class="col2">\n                <newrating [ratingnumber]="averageRating(profile.benefitsTotal)"></newrating>\n              </ion-col>\n            </ion-row>\n    \n            <ion-row>\n              <ion-col class="col1">\n                Worklife Balance\n              </ion-col>\n              <ion-col class="col2">\n                <newrating [ratingnumber]="averageRating(profile.balanceTotal)"></newrating>\n              </ion-col>\n            </ion-row>\n    \n            <ion-row>\n              <ion-col class="col1">\n                Speed of Service\n              </ion-col>\n              <ion-col class="col2">\n                <newrating [ratingnumber]="averageRating(profile.speedTotal)"></newrating>\n              </ion-col>\n            </ion-row>\n    \n          </ion-card-content>\n        </ion-card>\n    \n    </ion-content>\n    \n  '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companyprofile\companyprofile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
-    ], CompaniesPage);
-    return CompaniesPage;
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* ToastController */]])
+    ], CompanyprofilePage);
+    return CompanyprofilePage;
 }());
 
-//# sourceMappingURL=companies.js.map
+//# sourceMappingURL=companyprofile.js.map
 
 /***/ })
 

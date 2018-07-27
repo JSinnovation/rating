@@ -23,18 +23,18 @@ webpackEmptyAsyncContext.id = 112;
 var map = {
 	"../pages/companies/companies.module": [
 		280,
-		1
+		2
 	],
 	"../pages/companyprofile/companyprofile.module": [
-		283,
-		0
+		281,
+		1
 	],
 	"../pages/createcompany/createcompany.module": [
 		282,
 		7
 	],
 	"../pages/home/home.module": [
-		281,
+		283,
 		6
 	],
 	"../pages/login/login.module": [
@@ -46,12 +46,12 @@ var map = {
 		4
 	],
 	"../pages/review/review.module": [
-		287,
+		286,
 		3
 	],
 	"../pages/viewreviews/viewreviews.module": [
-		286,
-		2
+		287,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -209,10 +209,11 @@ var CompanyProvider = /** @class */ (function () {
     };
     CompanyProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */]])
     ], CompanyProvider);
     return CompanyProvider;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=company.js.map
@@ -326,13 +327,13 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/companies/companies.module#CompaniesPageModule', name: 'CompaniesPage', segment: 'companies', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/companyprofile/companyprofile.module#CompanyProfilePageModule', name: 'CompanyprofilePage', segment: 'companyprofile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/viewreviews/viewreviews.module#ViewreviewsPageModule', name: 'ViewreviewsPage', segment: 'viewreviews', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/viewreviews/viewreviews.module#ViewreviewsPageModule', name: 'ViewreviewsPage', segment: 'viewreviews', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -430,7 +431,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Websites\rating\rateme\src\app\app.html"*/'<ion-menu [content]="content">\n   <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name] = "p.icon" item-left></ion-icon> <!--square brackets to bind it p.icon from the array-->\n        {{p.title}}\n      </button>\n    </ion-list>\n\n    <button ion-button menuClose (click) = "logout()">\n      Logout\n    </button>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Websites\rating\rateme\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Websites\rating\rateme\src\app\app.html"*/'<ion-menu [content]="content" id="menu-avatar">\n   <ion-content>\n     <div>\n       <ion-row style = "align-items:center">\n         <ion-col col-12 class="imgCol">\n      <img class = "user-avatar round" src="http://placehold.it/50x50">\n         </ion-col>\n  </ion-row>\n  <ion-row style = "justify-content: center">\n    <h3>Full Name</h3>\n  </ion-row>\n     </div>\n    <ion-list no-lines>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name] = "p.icon" item-left></ion-icon> <!--square brackets to bind it p.icon from the array-->\n        {{p.title}}\n      </button>\n    </ion-list>\n<ion-list no-lines>\n    <button ion-item menuClose>\n        <ion-icon name = "settings" item-left></ion-icon>\n        Settings\n      </button>\n  <button ion-item menuClose (click) = "logout()">\n    <ion-icon name = "log-out" item-left></ion-icon>\n    Logout\n  </button>\n</ion-list>\n    \n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Websites\rating\rateme\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],

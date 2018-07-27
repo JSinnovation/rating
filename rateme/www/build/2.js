@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 286:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewreviewsPageModule", function() { return ViewreviewsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewreviews__ = __webpack_require__(301);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompaniesPageModule", function() { return CompaniesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__ = __webpack_require__(292);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,29 +20,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-__WEBPACK_IMPORTED_MODULE_0__components_components_module__["a" /* ComponentsModule */];
-var ViewreviewsPageModule = /** @class */ (function () {
-    function ViewreviewsPageModule() {
+var CompaniesPageModule = /** @class */ (function () {
+    function CompaniesPageModule() {
     }
-    ViewreviewsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+    CompaniesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__viewreviews__["a" /* ViewreviewsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__viewreviews__["a" /* ViewreviewsPage */]),
-                __WEBPACK_IMPORTED_MODULE_0__components_components_module__["a" /* ComponentsModule */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__companies__["a" /* CompaniesPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__["a" /* Ionic2RatingModule */]
             ],
         })
-    ], ViewreviewsPageModule);
-    return ViewreviewsPageModule;
+    ], CompaniesPageModule);
+    return CompaniesPageModule;
 }());
 
-//# sourceMappingURL=viewreviews.module.js.map
+//# sourceMappingURL=companies.module.js.map
 
 /***/ }),
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -226,7 +225,36 @@ var Ionic2Rating = (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ 291:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17340,42 +17368,13 @@ var Ionic2Rating = (function () {
 
 /***/ }),
 
-/***/ 290:
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ 291:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(293);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(289);
 /* unused harmony reexport Ionic2Rating */
 
 
@@ -17383,7 +17382,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17391,7 +17390,7 @@ module.exports = function(module) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(289);
 
 
 
@@ -17424,93 +17423,16 @@ var Ionic2RatingModule = (function () {
 
 /***/ }),
 
-/***/ 296:
+/***/ 419:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic2_rating__ = __webpack_require__(291);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompaniesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newrating_newrating__ = __webpack_require__(297);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__node_modules_angular_forms__ = __webpack_require__(15);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-var ComponentsModule = /** @class */ (function () {
-    function ComponentsModule() {
-    }
-    ComponentsModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_2__newrating_newrating__["a" /* NewratingComponent */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_0_ionic2_rating__["a" /* Ionic2RatingModule */], __WEBPACK_IMPORTED_MODULE_3__node_modules_angular_forms__["a" /* FormsModule */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_2__newrating_newrating__["a" /* NewratingComponent */]]
-        })
-    ], ComponentsModule);
-    return ComponentsModule;
-}());
-
-//# sourceMappingURL=components.module.js.map
-
-/***/ }),
-
-/***/ 297:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewratingComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-/**
- * Generated class for the NewratingComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
-var NewratingComponent = /** @class */ (function () {
-    function NewratingComponent() {
-    }
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-        __metadata("design:type", Number)
-    ], NewratingComponent.prototype, "ratingnumber", void 0);
-    NewratingComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'newrating',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\components\newrating\newrating.html"*/'<rating [(ngModel)] = "ratingnumber"\nreadOnly="true" \nmax="5" \nemptyStarIconName="star-outline" \nhalfStarIconName="star-half" \nstarIconName="star" \nnullable="false"> \n</rating>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\components\newrating\newrating.html"*/
-        }),
-        __metadata("design:paramtypes", [])
-    ], NewratingComponent);
-    return NewratingComponent;
-}());
-
-//# sourceMappingURL=newrating.js.map
-
-/***/ }),
-
-/***/ 301:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewreviewsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17523,34 +17445,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ViewreviewsPage = /** @class */ (function () {
-    function ViewreviewsPage(navCtrl, navParams) {
+
+var CompaniesPage = /** @class */ (function () {
+    function CompaniesPage(navCtrl, navParams, company) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.company = this.navParams.get("companyData");
-        console.log(this.company);
+        this.company = company;
+        this.companies = [];
     }
-    ViewreviewsPage.prototype.ionViewDidLoad = function () {
+    CompaniesPage.prototype.ionViewDidLoad = function () {
+        this.getAllCompanies();
     };
-    ViewreviewsPage.prototype.averageRating = function (arr) {
-        if (arr.length <= 0) {
-            return arr.length;
+    // new method
+    CompaniesPage.prototype.getAllCompanies = function () {
+        var _this = this;
+        this.company.getCompanies()
+            .subscribe(function (res) {
+            //res is an array and we are setting it to another array
+            _this.companies = res.result;
+        });
+    };
+    CompaniesPage.prototype.companyProfile = function (company) {
+        console.log(company);
+        this.navCtrl.push("CompanyprofilePage", { "data": company });
+        // this.navCtrl.push('CreatecorporationPage')
+    };
+    CompaniesPage.prototype.averageRating = function (number) {
+        if (number.length <= 0) {
+            this.rating = number.length;
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_2_lodash__["mean"](arr);
+            this.rating = __WEBPACK_IMPORTED_MODULE_3_lodash__["mean"](number);
         }
+        return this.rating;
     };
-    ViewreviewsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-viewreviews',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Reviews</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!--if the company data has not yet been reteived, *ngIf will hide the ion-content-->\n  <ion-content *ngIf="company">\n  <!-->angular like a for each loop -->\n  <ion-item *ngFor="let rating of company.rating">\n  <ion-row>\n    <ion-col col-2>\n  <ion-avatar ion-start>\n  <img src="http://placehold.it/10x10">\n  </ion-avatar>\n  </ion-col>\n  <!--grid width in ionic is 12 just like Bootstrap-->\n  \n  <ion-col col-10 class="rowCol">\n  <h2 class = "companyname" text-wrap>\n    {{rating.user.fullname}}\n  </h2>\n  \n  <ion-col class="dataCol">\n    <ion-row>\n      <ion-col col-12 text-wrap> \n  <span>\n   \n    {{rating.created}}\n  </span>\n      </ion-col>\n      \n      <ion-col col-12 class = "rating">\n     <span class="avg">  \n         <newrating [ratingnumber]="rating.userOverall"></newrating>\n     <p>\n        {{rating.review}}\n\n     </p>\n\n     </span>\n  \n   \n      </ion-col>     \n      \n    </ion-row>\n  </ion-col>\n  \n    </ion-col>\n  \n  </ion-row>\n  </ion-item>\n  </ion-content>\n  \n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/,
+    CompaniesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n<img src="http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.state}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n   <span class="avg">  \n      <rating [ngModel]="averageRating(company.ratingOverall)"\n      readOnly="true" \n      max="5" \n      emptyStarIconName="star-outline" \n      halfStarIconName="star-half" \n      starIconName="star" \n      nullable="false"> \n    </rating>\n\n   ({{averageRating(company.ratingOverall)}})\n   </span>\n\n \n    </ion-col>     \n    \n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
-    ], ViewreviewsPage);
-    return ViewreviewsPage;
-    var _a, _b;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
+    ], CompaniesPage);
+    return CompaniesPage;
 }());
 
-//# sourceMappingURL=viewreviews.js.map
+//# sourceMappingURL=companies.js.map
 
 /***/ })
 
