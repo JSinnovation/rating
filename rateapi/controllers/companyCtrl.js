@@ -26,15 +26,16 @@ exports.createCompany = async (req, res) => {
     newCompany.adminUser = req.body.userId;
   
     const company = await newCompany.save()
-    //const companyData = await newCompany.save();
-    /* 
+    const companyData = await newCompany.save();
+    
     await User.update({
         '_id': req.body.userId
     }, {
+        //update the company array with the company ID
         $push: {companies: {
             company: companyData._id
         }}
-    }); */
+    }); 
     
     return res.status(500).json({message: 'Company created successfully'});
 }
@@ -86,10 +87,12 @@ exports.addReview = async (req, res) => {
       
 }
 
-/*
+//search using the '_id'
 exports.addEmployee = async (req, res) => {
     await Company.update({
         '_id': req.body.company._id,
+        //make sure not alreaday registered
+        //$ne not equal operator...not existing
         'employees.employee': {$ne: req.body.user._id}
     }, {
         $push: {employees: {
@@ -105,7 +108,7 @@ exports.addEmployee = async (req, res) => {
 
     return res.status(200).json({message: 'Role added successfully.'});
 }
-
+/* 
 exports.search = async (req, res) => {
     const searchName = req.body.company;
     const regex = new RegExp(searchName, 'gi');
@@ -122,9 +125,9 @@ exports.leaderBoard = async (req, res) => {
     const results = await Company.find({})
                         .sort({"totalStars": -1});
 
-    return res.status(200).json({result: results}); */
-
-
+    return res.status(200).json({result: results}); 
+ 
+*/
 
 
 

@@ -5,10 +5,10 @@ webpackJsonp([3],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewPageModule", function() { return ReviewPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__review__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(426);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReviewPageModule = /** @class */ (function () {
-    function ReviewPageModule() {
+var SettingsPageModule = /** @class */ (function () {
+    function SettingsPageModule() {
     }
-    ReviewPageModule = __decorate([
+    SettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */],
+                __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */]),
             ],
         })
-    ], ReviewPageModule);
-    return ReviewPageModule;
+    ], SettingsPageModule);
+    return SettingsPageModule;
 }());
 
-//# sourceMappingURL=review.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 425:
+/***/ 426:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(198);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,67 +59,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ReviewPage = /** @class */ (function () {
-    function ReviewPage(navCtrl, navParams, company, toastCtrl) {
+
+var SettingsPage = /** @class */ (function () {
+    function SettingsPage(navCtrl, navParams, company, camera) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.company = company;
-        this.toastCtrl = toastCtrl;
-        this.companyProfile = this.navParams.get("data");
-        this.name = this.companyProfile.companyname;
+        this.camera = camera;
     }
-    ReviewPage.prototype.ionViewDidLoad = function () {
-        this.getData();
+    //because this returns an observable, we need to subscribe
+    SettingsPage.prototype.ionViewDidLoad = function () {
     };
-    ReviewPage.prototype.addReview = function () {
-        var _this = this;
-        this.company.addCompanyReview(this.companyProfile._id, this.culture, this.benefits, this.balance, this.speed, this.overall, this.review, this.userid)
-            .subscribe(function (res) {
-            //console.log(res.user);
-            if (res.message) {
-                var toast = _this.toastCtrl.create({
-                    message: res.message,
-                    duration: 3000,
-                    position: "bottom"
-                });
-                toast.present();
-                // console.log(res)
-            }
-            if (res.error) {
-                //console.log(res)
-                var toast = _this.toastCtrl.create({
-                    message: res.error,
-                    duration: 3000,
-                    position: "bottom"
-                });
-                toast.present();
-            }
-        });
-        this.review = '';
-    };
-    ReviewPage.prototype.getData = function () {
+    SettingsPage.prototype.ionViewDidEnter = function () {
         var _this = this;
         this.company.getUserData()
             .subscribe(function (res) {
             console.log(res.user);
-            if (res.user !== null) {
-                _this.userid = res.user._id;
-            }
+            _this.user = res.user;
         });
     };
-    ReviewPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-review',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\review\review.html"*/'<ion-header>\n\n  <ion-navbar>\n  <ion-title>{{ name }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-item>\n    <ion-label color="primary" stacked>Culture and Values</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="culture" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Compensation and Benefits</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="benefits" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Worklife Balance</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="balance" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Speed of Service</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="speed" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Overall</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="overall" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-grid>\n    <ion-row>\n      <ion-label color="primary" stacked>Review</ion-label>\n      <ion-col col-12>\n        <ion-textarea [(ngModel)]="review"></ion-textarea>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-item>\n    <button ion-button block (click)="addReview()">Add Review</button>\n  </ion-item>\n</ion-content>\n\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\review\review.html"*/,
+    SettingsPage.prototype.addImage = function () {
+        var _this = this;
+        var options = {
+            quality: 50,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+            allowEdit: false,
+            correctOrientation: true,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            targetWidth: 300,
+            targetHeight: 300,
+        };
+        this.camera.getPicture(options).then(function (imgUrl) {
+            _this.imagePath = 'data:image/jpeg;base64,' + imgUrl;
+            console.log(_this.imagePath);
+        });
+    };
+    SettingsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-settings',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\settings\settings.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Settings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n<ion-list>\n  <ion-list-header>\n    <ion-avatar item-start>\n      <img src="http://placehold.it/10x10">\n      </ion-avatar>\n      <p class = "account">Account</p>\n      <p class = "name" *ngIf="user">{{this.user.fullname}} </p>\n      \n      <button ion-button item-end (click)="addImage()">Add Image</button>\n  </ion-list-header>\n</ion-list>\n\n<ion-list *ngIf="user">\n  <ion-list-header class="account">Companies</ion-list-header>\n  <ion-item *ngFor= "let usercompany of user.companies">\n    <ion-avatar item-start>\n        <img src="http://placehold.it/10x10">\n    </ion-avatar>\n\n    <ion-label class="name">\n      {{usercompany.company.companyname}}\n    </ion-label>\n\n    <button ion-button item-end>Add Logo</button>\n  </ion-item>\n</ion-list>\n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\settings\settings.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
-    ], ReviewPage);
-    return ReviewPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */]])
+    ], SettingsPage);
+    return SettingsPage;
 }());
 
-//# sourceMappingURL=review.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 @Component({
@@ -59,6 +60,10 @@ if(page.component === "HomePage"){
 } else{
   this.nav.push(page.component);
 }
+  }
+
+ settings(){
+   this.nav.push("SettingsPage");
  
   }
 
@@ -66,6 +71,6 @@ if(page.component === "HomePage"){
     this.storage.remove('useremail');
     this.nav.setRoot('LoginPage');
 
-  }
+  } 
 
 }

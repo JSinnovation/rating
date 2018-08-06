@@ -8,7 +8,8 @@
 <!--if the company data has not yet been reteived, *ngIf will hide the ion-content-->
   <ion-content *ngIf="company">
   <!-->angular like a for each loop -->
-  <ion-item *ngFor="let rating of company.rating">
+  <ion-item *ngFor="let rating of company.rating" (click)="showAlert(rating)">
+    <!--Loop with *ngfor and display each element inside its own item-->
   <ion-row>
     <ion-col col-2>
   <ion-avatar ion-start>
@@ -35,7 +36,10 @@
      <span class="avg">  
          <newrating [ratingnumber]="rating.userOverall"></newrating>
      <p>
-        {{rating.review}}
+       <!--you can use <p text-wrap> to wrap the text instead of cutting it off-->
+        {{rating.review.substr(0,20)}}...
+        
+        <!--three dots shows still contains some text-->
 
      </p>
 

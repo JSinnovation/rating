@@ -5,7 +5,12 @@ const userSchema = mongoose.Schema({
     fullname: {type: String},
     email: {type: String},
     password: {type: String},
-    
+    role: {type:String, default: ''},
+    companies: [{
+        company: {type: mongoose.Schema.Types.ObjectId, ref: 'Company'}
+        }],
+        imageId: {type: String, default: ''},
+        imageVersion: {tpe: String, default: ''}
     });
 
 userSchema.methods.encryptPassword = (password) => {
@@ -15,12 +20,5 @@ userSchema.methods.encryptPassword = (password) => {
 userSchema.methods.checkPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 } 
-userSchema.methods.encryptPassword = (password) => {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
-}
-
-userSchema.methods.checkPassword = function(password){
-    return bcrypt.compareSync(password, this.password);
-}
     module.exports =  mongoose.model('User',userSchema);
  

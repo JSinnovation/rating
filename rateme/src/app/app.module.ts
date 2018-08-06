@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
-
+import {Camera} from '@ionic-native/camera';
 import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -33,7 +33,8 @@ import { CompanyProvider } from '../providers/company/company';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RegisterProvider,
-    CompanyProvider
+    CompanyProvider,
+    Camera
   ]
 })
 export class AppModule {}

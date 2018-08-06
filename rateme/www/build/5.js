@@ -5,10 +5,10 @@ webpackJsonp([5],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(424);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LoginPageModule = /** @class */ (function () {
-    function LoginPageModule() {
+var RegisterPageModule = /** @class */ (function () {
+    function RegisterPageModule() {
     }
-    LoginPageModule = __decorate([
+    RegisterPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
             ],
         })
-    ], LoginPageModule);
-    return LoginPageModule;
+    ], RegisterPageModule);
+    return RegisterPageModule;
 }());
 
-//# sourceMappingURL=login.module.js.map
+//# sourceMappingURL=register.module.js.map
 
 /***/ }),
 
-/***/ 423:
+/***/ 424:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_register_register__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_register_register__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -60,8 +60,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams, reg, loadingCtrl, alertCtrl, storage) {
+var RegisterPage = /** @class */ (function () {
+    function RegisterPage(navCtrl, navParams, reg, loadingCtrl, alertCtrl, storage) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.reg = reg;
@@ -69,16 +69,16 @@ var LoginPage = /** @class */ (function () {
         this.alertCtrl = alertCtrl;
         this.storage = storage;
     }
-    LoginPage.prototype.ionViewDidLoad = function () {
+    RegisterPage.prototype.ionViewDidLoad = function () {
     };
-    LoginPage.prototype.registerPage = function () {
-        this.navCtrl.push("RegisterPage");
+    RegisterPage.prototype.loginPage = function () {
+        this.navCtrl.setRoot("LoginPage");
     };
-    LoginPage.prototype.login = function () {
+    RegisterPage.prototype.userSignup = function () {
         var _this = this;
-        if (this.email !== undefined || this.password !== undefined) {
+        if (this.fullname !== undefined || this.email !== undefined || this.password !== undefined) {
             this.showLoading();
-            this.reg.loginUser(this.email, this.password)
+            this.reg.registerUser(this.fullname, this.email, this.password)
                 .subscribe(function (res) {
                 _this.loading.dismiss();
                 if (res.user) {
@@ -87,46 +87,48 @@ var LoginPage = /** @class */ (function () {
                 }
                 if (res.error) {
                     var alert_1 = _this.alertCtrl.create({
-                        title: 'Login Error',
+                        title: 'Sign Up Error',
                         subTitle: res.error,
                         buttons: ['OK']
                     });
                     alert_1.present();
                 }
             });
+            this.fullname = '';
             this.password = '';
             this.email = '';
         }
         else {
             var alert_2 = this.alertCtrl.create({
-                title: 'Login Error',
+                title: 'Sign Up Error',
                 subTitle: 'You cannot submit empty fields',
                 buttons: ['OK']
             });
             alert_2.present();
         }
     };
-    LoginPage.prototype.showLoading = function () {
+    RegisterPage.prototype.showLoading = function () {
         this.loading = this.loadingCtrl.create({
-            content: "Authenticating.."
+            content: 'Authenticating.....',
+            duration: 3000
         });
         this.loading.present();
     };
-    LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\login\login.html"*/'<ion-content>\n  <div padding ion-fixed style="height:100%; width:100%">\n      <div class="logo">\n          <img src="http://placehold.it/50x50">\n        </div>\n      <ion-item>\n        <ion-input type="email"[(ngModel)]="email" name ="email" placeholder="Email"></ion-input>\n        </ion-item>\n      \n        <ion-item>\n        <ion-input type="password" [(ngModel)]="password" name = "password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block class="loginBtn" (click) = "login()">Login</button>\n       <br> \n      <button ion-button block clear class="signup" (click)="registerPage()">Don\'t have an account? Sign Up</button>\n  </div> \n</ion-content>\n '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\login\login.html"*/,
+    RegisterPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-register',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\register\register.html"*/'<ion-content>\n  <div padding ion-fixed style="height:100%; width:100%">\n      <div class="logo">\n          <img src="http://placehold.it/50x50">\n        </div>\n        <ion-item>\n          <ion-input type="text"[(ngModel)]="fullname" name ="fullname" placeholder="Fullname"></ion-input>\n          </ion-item>\n      <ion-item>\n        <ion-input type="email"[(ngModel)]="email" name ="email" placeholder="Email"></ion-input>\n        </ion-item>\n      \n        <ion-item>\n        <ion-input type="password" [(ngModel)]="password" name = "password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block class="loginBtn" (click) = "userSignup()">Sign Up</button>\n      <br> \n      <button ion-button block clear class="signup" (click)="loginPage()">Already have an account? Login</button>\n  </div> \n</ion-content>\n '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\register\register.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_register_register__["a" /* RegisterProvider */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_register_register__["a" /* RegisterProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
-    ], LoginPage);
-    return LoginPage;
+    ], RegisterPage);
+    return RegisterPage;
 }());
 
-//# sourceMappingURL=login.js.map
+//# sourceMappingURL=register.js.map
 
 /***/ })
 

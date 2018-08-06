@@ -85,12 +85,21 @@ userId
 
 registerEmployee(company, user, role): Observable<any>{
   return this.http
-    .post('https://ratingapi.herokuapp.com/api/register/employee', {
+   // .post('https://ratingapi.herokuapp.com/api/register/employee', {
+      .post('http://localhost:3000/api/register/employee', {
       company: company,
       user: user,
       role: role
     });
   }
+uploadImage(userID, image): Observable<any>{
+  return this.http 
+  .post('http://localhost:3000/api/v1/profile/upload',{
+    userId: userID,
+    image: image
+  });
+}
+
 }
 
 

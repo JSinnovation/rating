@@ -1,14 +1,14 @@
-webpackJsonp([0],Array(287).concat([
-/* 287 */
+webpackJsonp([0],Array(289).concat([
+/* 289 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewreviewsPageModule", function() { return ViewreviewsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewreviews__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewreviews__ = __webpack_require__(429);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -40,7 +40,7 @@ var ViewreviewsPageModule = /** @class */ (function () {
 //# sourceMappingURL=viewreviews.module.js.map
 
 /***/ }),
-/* 288 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var require;//! moment.js
@@ -1878,7 +1878,7 @@ var ViewreviewsPageModule = /** @class */ (function () {
             try {
                 oldLocale = globalLocale._abbr;
                 var aliasedRequire = require;
-                __webpack_require__(427)("./" + name);
+                __webpack_require__(430)("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {}
         }
@@ -4550,10 +4550,10 @@ var ViewreviewsPageModule = /** @class */ (function () {
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(290)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(292)(module)))
 
 /***/ }),
-/* 289 */
+/* 291 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4736,7 +4736,7 @@ var Ionic2Rating = (function () {
 //# sourceMappingURL=ionic2-rating.js.map
 
 /***/ }),
-/* 290 */
+/* 292 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4764,7 +4764,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 291 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -21874,23 +21874,23 @@ module.exports = function(module) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50), __webpack_require__(290)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50), __webpack_require__(292)(module)))
 
 /***/ }),
-/* 292 */
+/* 294 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(295);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(291);
 /* unused harmony reexport Ionic2Rating */
 
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 293 */
+/* 295 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21898,7 +21898,7 @@ module.exports = function(module) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(291);
 
 
 
@@ -21930,14 +21930,14 @@ var Ionic2RatingModule = (function () {
 //# sourceMappingURL=ionic2-rating.module.js.map
 
 /***/ }),
-/* 294 */
+/* 296 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic2_rating__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic2_rating__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newrating_newrating__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__newrating_newrating__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__node_modules_angular_forms__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21965,7 +21965,7 @@ var ComponentsModule = /** @class */ (function () {
 //# sourceMappingURL=components.module.js.map
 
 /***/ }),
-/* 295 */
+/* 297 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22006,13 +22006,13 @@ var NewratingComponent = /** @class */ (function () {
 //# sourceMappingURL=newrating.js.map
 
 /***/ }),
-/* 296 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22083,13 +22083,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 297 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22222,13 +22222,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 298 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22285,13 +22285,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 299 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22348,13 +22348,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 300 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22474,13 +22474,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 301 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22537,13 +22537,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 302 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22645,13 +22645,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 303 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22708,13 +22708,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 304 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22817,13 +22817,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 305 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -22953,13 +22953,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 306 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23047,13 +23047,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 307 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23109,13 +23109,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 308 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23232,13 +23232,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 309 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23355,13 +23355,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 310 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23467,13 +23467,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 311 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23622,13 +23622,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 312 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23714,13 +23714,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 313 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23897,13 +23897,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 314 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -23964,13 +23964,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 315 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24048,13 +24048,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 316 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24112,13 +24112,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 317 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24192,13 +24192,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 318 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24272,13 +24272,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 319 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24352,13 +24352,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 320 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24455,13 +24455,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 321 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24559,13 +24559,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 322 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24630,13 +24630,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 323 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24697,13 +24697,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 324 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24768,13 +24768,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 325 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24839,13 +24839,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 326 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24905,13 +24905,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 327 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -24976,13 +24976,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 328 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25051,13 +25051,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 329 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25147,13 +25147,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 330 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25243,13 +25243,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 331 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25330,13 +25330,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 332 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25414,13 +25414,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 333 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25484,13 +25484,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 334 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25594,13 +25594,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 335 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25707,13 +25707,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 336 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25771,13 +25771,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 337 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25858,13 +25858,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 338 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -25936,13 +25936,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 339 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26018,13 +26018,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 340 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26097,13 +26097,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 341 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26177,13 +26177,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 342 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26258,13 +26258,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 343 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26385,13 +26385,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 344 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26513,13 +26513,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 345 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26614,13 +26614,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 346 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26742,13 +26742,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 347 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -26900,13 +26900,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 348 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27014,13 +27014,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 349 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27113,13 +27113,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 350 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27199,13 +27199,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 351 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27335,13 +27335,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 352 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27408,13 +27408,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 353 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27504,13 +27504,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 354 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27590,13 +27590,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 355 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27683,13 +27683,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 356 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27774,13 +27774,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 357 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -27888,13 +27888,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 358 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28018,13 +28018,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 359 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28103,13 +28103,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 360 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28194,13 +28194,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 361 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28334,13 +28334,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 362 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28408,13 +28408,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 363 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28530,13 +28530,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 364 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28631,13 +28631,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 365 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28747,13 +28747,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 366 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28815,13 +28815,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 367 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28909,13 +28909,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 368 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -28994,13 +28994,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 369 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29102,13 +29102,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 370 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29266,13 +29266,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 371 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29352,13 +29352,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 372 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29438,13 +29438,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 373 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29502,13 +29502,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 374 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29599,13 +29599,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 375 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29665,13 +29665,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 376 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29792,13 +29792,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 377 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29883,13 +29883,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 378 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -29974,13 +29974,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 379 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30038,13 +30038,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 380 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30166,13 +30166,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 381 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30296,13 +30296,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 382 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30365,13 +30365,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 383 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30430,13 +30430,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 384 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30509,13 +30509,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 385 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30695,13 +30695,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 386 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30797,13 +30797,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 387 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30861,13 +30861,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 388 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -30936,13 +30936,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 389 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31096,13 +31096,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 390 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31273,13 +31273,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 391 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31345,13 +31345,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 392 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31460,13 +31460,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 393 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31575,13 +31575,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 394 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31667,13 +31667,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 395 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31740,13 +31740,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 396 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31803,13 +31803,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 397 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -31936,13 +31936,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 398 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32029,13 +32029,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 399 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32100,13 +32100,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 400 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32220,13 +32220,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 401 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32291,13 +32291,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 402 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32357,13 +32357,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 403 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32483,12 +32483,12 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 404 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32581,13 +32581,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 405 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32676,13 +32676,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 406 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32738,13 +32738,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 407 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32800,13 +32800,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 408 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js language configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -32923,13 +32923,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 409 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33078,13 +33078,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 410 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33180,13 +33180,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 411 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33242,13 +33242,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 412 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33304,13 +33304,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 413 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33387,13 +33387,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 414 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33459,13 +33459,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 415 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33523,13 +33523,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 416 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33637,13 +33637,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 417 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33744,13 +33744,13 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 418 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(288)) :
+    true ? factory(__webpack_require__(290)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -33851,23 +33851,24 @@ var NewratingComponent = /** @class */ (function () {
 
 
 /***/ }),
-/* 419 */,
-/* 420 */,
 /* 421 */,
 /* 422 */,
 /* 423 */,
 /* 424 */,
 /* 425 */,
-/* 426 */
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewreviewsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -33883,9 +33884,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ViewreviewsPage = /** @class */ (function () {
-    function ViewreviewsPage(navCtrl, navParams) {
+    function ViewreviewsPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
         this.company = this.navParams.get("companyData");
     }
     ViewreviewsPage.prototype.ionViewDidLoad = function () {
@@ -33902,11 +33904,22 @@ var ViewreviewsPage = /** @class */ (function () {
         //define function call and set it equal to function with whatever parameter you want to pass
         return __WEBPACK_IMPORTED_MODULE_3_moment___default()(time).fromNow();
     };
+    //add the ShowAlert Method with rating parameter
+    ViewreviewsPage.prototype.showAlert = function (rating) {
+        var alert = this.alertCtrl.create({
+            title: 'Review',
+            subTitle: rating.review,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
     ViewreviewsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-viewreviews',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Reviews</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!--if the company data has not yet been reteived, *ngIf will hide the ion-content-->\n  <ion-content *ngIf="company">\n  <!-->angular like a for each loop -->\n  <ion-item *ngFor="let rating of company.rating">\n  <ion-row>\n    <ion-col col-2>\n  <ion-avatar ion-start>\n  <img src="http://placehold.it/10x10">\n  </ion-avatar>\n  </ion-col>\n  <!--grid width in ionic is 12 just like Bootstrap-->\n  \n  <ion-col col-10 class="rowCol">\n  <h2 class = "companyname" text-wrap>\n    {{rating.user.fullname}}\n  </h2>\n  \n  <ion-col class="dataCol">\n    <ion-row>\n      <ion-col col-12 text-wrap> \n  <span class = "time">\n   {{GetReviewTime(rating.created)}}\n  \n  </span>\n      </ion-col>\n      \n      <ion-col col-12 class = "rating">\n     <span class="avg">  \n         <newrating [ratingnumber]="rating.userOverall"></newrating>\n     <p>\n        {{rating.review}}\n\n     </p>\n\n     </span>\n  \n   \n      </ion-col>     \n      \n    </ion-row>\n  </ion-col>\n  \n    </ion-col>\n  \n  </ion-row>\n  </ion-item>\n  </ion-content>\n  \n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/,
+            selector: 'page-viewreviews',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Reviews</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!--if the company data has not yet been reteived, *ngIf will hide the ion-content-->\n  <ion-content *ngIf="company">\n  <!-->angular like a for each loop -->\n  <ion-item *ngFor="let rating of company.rating" (click)="showAlert(rating)">\n    <!--Loop with *ngfor and display each element inside its own item-->\n  <ion-row>\n    <ion-col col-2>\n  <ion-avatar ion-start>\n  <img src="http://placehold.it/10x10">\n  </ion-avatar>\n  </ion-col>\n  <!--grid width in ionic is 12 just like Bootstrap-->\n  \n  <ion-col col-10 class="rowCol">\n  <h2 class = "companyname" text-wrap>\n    {{rating.user.fullname}}\n  </h2>\n  \n  <ion-col class="dataCol">\n    <ion-row>\n      <ion-col col-12 text-wrap> \n  <span class = "time">\n   {{GetReviewTime(rating.created)}}\n  \n  </span>\n      </ion-col>\n      \n      <ion-col col-12 class = "rating">\n     <span class="avg">  \n         <newrating [ratingnumber]="rating.userOverall"></newrating>\n     <p>\n       <!--you can use <p text-wrap> to wrap the text instead of cutting it off-->\n        {{rating.review.substr(0,20)}}...\n        \n        <!--three dots shows still contains some text-->\n\n     </p>\n\n     </span>\n  \n   \n      </ion-col>     \n      \n    </ion-row>\n  </ion-col>\n  \n    </ion-col>\n  \n  </ion-row>\n  </ion-item>\n  </ion-content>\n  \n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\viewreviews\viewreviews.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], ViewreviewsPage);
     return ViewreviewsPage;
 }());
@@ -33914,256 +33927,256 @@ var ViewreviewsPage = /** @class */ (function () {
 //# sourceMappingURL=viewreviews.js.map
 
 /***/ }),
-/* 427 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 296,
-	"./af.js": 296,
-	"./ar": 297,
-	"./ar-dz": 298,
-	"./ar-dz.js": 298,
-	"./ar-kw": 299,
-	"./ar-kw.js": 299,
-	"./ar-ly": 300,
-	"./ar-ly.js": 300,
-	"./ar-ma": 301,
-	"./ar-ma.js": 301,
-	"./ar-sa": 302,
-	"./ar-sa.js": 302,
-	"./ar-tn": 303,
-	"./ar-tn.js": 303,
-	"./ar.js": 297,
-	"./az": 304,
-	"./az.js": 304,
-	"./be": 305,
-	"./be.js": 305,
-	"./bg": 306,
-	"./bg.js": 306,
-	"./bm": 307,
-	"./bm.js": 307,
-	"./bn": 308,
-	"./bn.js": 308,
-	"./bo": 309,
-	"./bo.js": 309,
-	"./br": 310,
-	"./br.js": 310,
-	"./bs": 311,
-	"./bs.js": 311,
-	"./ca": 312,
-	"./ca.js": 312,
-	"./cs": 313,
-	"./cs.js": 313,
-	"./cv": 314,
-	"./cv.js": 314,
-	"./cy": 315,
-	"./cy.js": 315,
-	"./da": 316,
-	"./da.js": 316,
-	"./de": 317,
-	"./de-at": 318,
-	"./de-at.js": 318,
-	"./de-ch": 319,
-	"./de-ch.js": 319,
-	"./de.js": 317,
-	"./dv": 320,
-	"./dv.js": 320,
-	"./el": 321,
-	"./el.js": 321,
-	"./en-au": 322,
-	"./en-au.js": 322,
-	"./en-ca": 323,
-	"./en-ca.js": 323,
-	"./en-gb": 324,
-	"./en-gb.js": 324,
-	"./en-ie": 325,
-	"./en-ie.js": 325,
-	"./en-il": 326,
-	"./en-il.js": 326,
-	"./en-nz": 327,
-	"./en-nz.js": 327,
-	"./eo": 328,
-	"./eo.js": 328,
-	"./es": 329,
-	"./es-do": 330,
-	"./es-do.js": 330,
-	"./es-us": 331,
-	"./es-us.js": 331,
-	"./es.js": 329,
-	"./et": 332,
-	"./et.js": 332,
-	"./eu": 333,
-	"./eu.js": 333,
-	"./fa": 334,
-	"./fa.js": 334,
-	"./fi": 335,
-	"./fi.js": 335,
-	"./fo": 336,
-	"./fo.js": 336,
-	"./fr": 337,
-	"./fr-ca": 338,
-	"./fr-ca.js": 338,
-	"./fr-ch": 339,
-	"./fr-ch.js": 339,
-	"./fr.js": 337,
-	"./fy": 340,
-	"./fy.js": 340,
-	"./gd": 341,
-	"./gd.js": 341,
-	"./gl": 342,
-	"./gl.js": 342,
-	"./gom-latn": 343,
-	"./gom-latn.js": 343,
-	"./gu": 344,
-	"./gu.js": 344,
-	"./he": 345,
-	"./he.js": 345,
-	"./hi": 346,
-	"./hi.js": 346,
-	"./hr": 347,
-	"./hr.js": 347,
-	"./hu": 348,
-	"./hu.js": 348,
-	"./hy-am": 349,
-	"./hy-am.js": 349,
-	"./id": 350,
-	"./id.js": 350,
-	"./is": 351,
-	"./is.js": 351,
-	"./it": 352,
-	"./it.js": 352,
-	"./ja": 353,
-	"./ja.js": 353,
-	"./jv": 354,
-	"./jv.js": 354,
-	"./ka": 355,
-	"./ka.js": 355,
-	"./kk": 356,
-	"./kk.js": 356,
-	"./km": 357,
-	"./km.js": 357,
-	"./kn": 358,
-	"./kn.js": 358,
-	"./ko": 359,
-	"./ko.js": 359,
-	"./ky": 360,
-	"./ky.js": 360,
-	"./lb": 361,
-	"./lb.js": 361,
-	"./lo": 362,
-	"./lo.js": 362,
-	"./lt": 363,
-	"./lt.js": 363,
-	"./lv": 364,
-	"./lv.js": 364,
-	"./me": 365,
-	"./me.js": 365,
-	"./mi": 366,
-	"./mi.js": 366,
-	"./mk": 367,
-	"./mk.js": 367,
-	"./ml": 368,
-	"./ml.js": 368,
-	"./mn": 369,
-	"./mn.js": 369,
-	"./mr": 370,
-	"./mr.js": 370,
-	"./ms": 371,
-	"./ms-my": 372,
-	"./ms-my.js": 372,
-	"./ms.js": 371,
-	"./mt": 373,
-	"./mt.js": 373,
-	"./my": 374,
-	"./my.js": 374,
-	"./nb": 375,
-	"./nb.js": 375,
-	"./ne": 376,
-	"./ne.js": 376,
-	"./nl": 377,
-	"./nl-be": 378,
-	"./nl-be.js": 378,
-	"./nl.js": 377,
-	"./nn": 379,
-	"./nn.js": 379,
-	"./pa-in": 380,
-	"./pa-in.js": 380,
-	"./pl": 381,
-	"./pl.js": 381,
-	"./pt": 382,
-	"./pt-br": 383,
-	"./pt-br.js": 383,
-	"./pt.js": 382,
-	"./ro": 384,
-	"./ro.js": 384,
-	"./ru": 385,
-	"./ru.js": 385,
-	"./sd": 386,
-	"./sd.js": 386,
-	"./se": 387,
-	"./se.js": 387,
-	"./si": 388,
-	"./si.js": 388,
-	"./sk": 389,
-	"./sk.js": 389,
-	"./sl": 390,
-	"./sl.js": 390,
-	"./sq": 391,
-	"./sq.js": 391,
-	"./sr": 392,
-	"./sr-cyrl": 393,
-	"./sr-cyrl.js": 393,
-	"./sr.js": 392,
-	"./ss": 394,
-	"./ss.js": 394,
-	"./sv": 395,
-	"./sv.js": 395,
-	"./sw": 396,
-	"./sw.js": 396,
-	"./ta": 397,
-	"./ta.js": 397,
-	"./te": 398,
-	"./te.js": 398,
-	"./tet": 399,
-	"./tet.js": 399,
-	"./tg": 400,
-	"./tg.js": 400,
-	"./th": 401,
-	"./th.js": 401,
-	"./tl-ph": 402,
-	"./tl-ph.js": 402,
-	"./tlh": 403,
-	"./tlh.js": 403,
-	"./tr": 404,
-	"./tr.js": 404,
-	"./tzl": 405,
-	"./tzl.js": 405,
-	"./tzm": 406,
-	"./tzm-latn": 407,
-	"./tzm-latn.js": 407,
-	"./tzm.js": 406,
-	"./ug-cn": 408,
-	"./ug-cn.js": 408,
-	"./uk": 409,
-	"./uk.js": 409,
-	"./ur": 410,
-	"./ur.js": 410,
-	"./uz": 411,
-	"./uz-latn": 412,
-	"./uz-latn.js": 412,
-	"./uz.js": 411,
-	"./vi": 413,
-	"./vi.js": 413,
-	"./x-pseudo": 414,
-	"./x-pseudo.js": 414,
-	"./yo": 415,
-	"./yo.js": 415,
-	"./zh-cn": 416,
-	"./zh-cn.js": 416,
-	"./zh-hk": 417,
-	"./zh-hk.js": 417,
-	"./zh-tw": 418,
-	"./zh-tw.js": 418
+	"./af": 298,
+	"./af.js": 298,
+	"./ar": 299,
+	"./ar-dz": 300,
+	"./ar-dz.js": 300,
+	"./ar-kw": 301,
+	"./ar-kw.js": 301,
+	"./ar-ly": 302,
+	"./ar-ly.js": 302,
+	"./ar-ma": 303,
+	"./ar-ma.js": 303,
+	"./ar-sa": 304,
+	"./ar-sa.js": 304,
+	"./ar-tn": 305,
+	"./ar-tn.js": 305,
+	"./ar.js": 299,
+	"./az": 306,
+	"./az.js": 306,
+	"./be": 307,
+	"./be.js": 307,
+	"./bg": 308,
+	"./bg.js": 308,
+	"./bm": 309,
+	"./bm.js": 309,
+	"./bn": 310,
+	"./bn.js": 310,
+	"./bo": 311,
+	"./bo.js": 311,
+	"./br": 312,
+	"./br.js": 312,
+	"./bs": 313,
+	"./bs.js": 313,
+	"./ca": 314,
+	"./ca.js": 314,
+	"./cs": 315,
+	"./cs.js": 315,
+	"./cv": 316,
+	"./cv.js": 316,
+	"./cy": 317,
+	"./cy.js": 317,
+	"./da": 318,
+	"./da.js": 318,
+	"./de": 319,
+	"./de-at": 320,
+	"./de-at.js": 320,
+	"./de-ch": 321,
+	"./de-ch.js": 321,
+	"./de.js": 319,
+	"./dv": 322,
+	"./dv.js": 322,
+	"./el": 323,
+	"./el.js": 323,
+	"./en-au": 324,
+	"./en-au.js": 324,
+	"./en-ca": 325,
+	"./en-ca.js": 325,
+	"./en-gb": 326,
+	"./en-gb.js": 326,
+	"./en-ie": 327,
+	"./en-ie.js": 327,
+	"./en-il": 328,
+	"./en-il.js": 328,
+	"./en-nz": 329,
+	"./en-nz.js": 329,
+	"./eo": 330,
+	"./eo.js": 330,
+	"./es": 331,
+	"./es-do": 332,
+	"./es-do.js": 332,
+	"./es-us": 333,
+	"./es-us.js": 333,
+	"./es.js": 331,
+	"./et": 334,
+	"./et.js": 334,
+	"./eu": 335,
+	"./eu.js": 335,
+	"./fa": 336,
+	"./fa.js": 336,
+	"./fi": 337,
+	"./fi.js": 337,
+	"./fo": 338,
+	"./fo.js": 338,
+	"./fr": 339,
+	"./fr-ca": 340,
+	"./fr-ca.js": 340,
+	"./fr-ch": 341,
+	"./fr-ch.js": 341,
+	"./fr.js": 339,
+	"./fy": 342,
+	"./fy.js": 342,
+	"./gd": 343,
+	"./gd.js": 343,
+	"./gl": 344,
+	"./gl.js": 344,
+	"./gom-latn": 345,
+	"./gom-latn.js": 345,
+	"./gu": 346,
+	"./gu.js": 346,
+	"./he": 347,
+	"./he.js": 347,
+	"./hi": 348,
+	"./hi.js": 348,
+	"./hr": 349,
+	"./hr.js": 349,
+	"./hu": 350,
+	"./hu.js": 350,
+	"./hy-am": 351,
+	"./hy-am.js": 351,
+	"./id": 352,
+	"./id.js": 352,
+	"./is": 353,
+	"./is.js": 353,
+	"./it": 354,
+	"./it.js": 354,
+	"./ja": 355,
+	"./ja.js": 355,
+	"./jv": 356,
+	"./jv.js": 356,
+	"./ka": 357,
+	"./ka.js": 357,
+	"./kk": 358,
+	"./kk.js": 358,
+	"./km": 359,
+	"./km.js": 359,
+	"./kn": 360,
+	"./kn.js": 360,
+	"./ko": 361,
+	"./ko.js": 361,
+	"./ky": 362,
+	"./ky.js": 362,
+	"./lb": 363,
+	"./lb.js": 363,
+	"./lo": 364,
+	"./lo.js": 364,
+	"./lt": 365,
+	"./lt.js": 365,
+	"./lv": 366,
+	"./lv.js": 366,
+	"./me": 367,
+	"./me.js": 367,
+	"./mi": 368,
+	"./mi.js": 368,
+	"./mk": 369,
+	"./mk.js": 369,
+	"./ml": 370,
+	"./ml.js": 370,
+	"./mn": 371,
+	"./mn.js": 371,
+	"./mr": 372,
+	"./mr.js": 372,
+	"./ms": 373,
+	"./ms-my": 374,
+	"./ms-my.js": 374,
+	"./ms.js": 373,
+	"./mt": 375,
+	"./mt.js": 375,
+	"./my": 376,
+	"./my.js": 376,
+	"./nb": 377,
+	"./nb.js": 377,
+	"./ne": 378,
+	"./ne.js": 378,
+	"./nl": 379,
+	"./nl-be": 380,
+	"./nl-be.js": 380,
+	"./nl.js": 379,
+	"./nn": 381,
+	"./nn.js": 381,
+	"./pa-in": 382,
+	"./pa-in.js": 382,
+	"./pl": 383,
+	"./pl.js": 383,
+	"./pt": 384,
+	"./pt-br": 385,
+	"./pt-br.js": 385,
+	"./pt.js": 384,
+	"./ro": 386,
+	"./ro.js": 386,
+	"./ru": 387,
+	"./ru.js": 387,
+	"./sd": 388,
+	"./sd.js": 388,
+	"./se": 389,
+	"./se.js": 389,
+	"./si": 390,
+	"./si.js": 390,
+	"./sk": 391,
+	"./sk.js": 391,
+	"./sl": 392,
+	"./sl.js": 392,
+	"./sq": 393,
+	"./sq.js": 393,
+	"./sr": 394,
+	"./sr-cyrl": 395,
+	"./sr-cyrl.js": 395,
+	"./sr.js": 394,
+	"./ss": 396,
+	"./ss.js": 396,
+	"./sv": 397,
+	"./sv.js": 397,
+	"./sw": 398,
+	"./sw.js": 398,
+	"./ta": 399,
+	"./ta.js": 399,
+	"./te": 400,
+	"./te.js": 400,
+	"./tet": 401,
+	"./tet.js": 401,
+	"./tg": 402,
+	"./tg.js": 402,
+	"./th": 403,
+	"./th.js": 403,
+	"./tl-ph": 404,
+	"./tl-ph.js": 404,
+	"./tlh": 405,
+	"./tlh.js": 405,
+	"./tr": 406,
+	"./tr.js": 406,
+	"./tzl": 407,
+	"./tzl.js": 407,
+	"./tzm": 408,
+	"./tzm-latn": 409,
+	"./tzm-latn.js": 409,
+	"./tzm.js": 408,
+	"./ug-cn": 410,
+	"./ug-cn.js": 410,
+	"./uk": 411,
+	"./uk.js": 411,
+	"./ur": 412,
+	"./ur.js": 412,
+	"./uz": 413,
+	"./uz-latn": 414,
+	"./uz-latn.js": 414,
+	"./uz.js": 413,
+	"./vi": 415,
+	"./vi.js": 415,
+	"./x-pseudo": 416,
+	"./x-pseudo.js": 416,
+	"./yo": 417,
+	"./yo.js": 417,
+	"./zh-cn": 418,
+	"./zh-cn.js": 418,
+	"./zh-hk": 419,
+	"./zh-hk.js": 419,
+	"./zh-tw": 420,
+	"./zh-tw.js": 420
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -34179,7 +34192,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 427;
+webpackContext.id = 430;
 
 /***/ })
 ]));

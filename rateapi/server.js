@@ -7,6 +7,7 @@ const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 const passport = require('passport');
 
+
 const app = express();
 
 mongoose.Promise = global.Promise
@@ -51,16 +52,16 @@ app.on('unhandledRejection', error => {
 
 const user = require('./routes/userRoute');
 const company = require('./routes/companyRoute');
-//const file = require('./routes/fileRoute');
+const file = require('./routes/fileRoute');
 
 app.use('/api', user);
 app.use('/api', company);//use middleware
-
+ app.use('/api', file); 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 })
 
-//app.use('/api', file);
+ 
 
 /* app.listen(process.env.PORT || 3000, () => {
     console.log('Server running on port 3000'); 

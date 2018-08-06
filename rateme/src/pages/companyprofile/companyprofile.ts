@@ -11,7 +11,7 @@ import * as _ from 'lodash';
   templateUrl: 'companyprofile.html',
 })
 export class CompanyprofilePage {
-
+//variables
   profile: any;
   user: any;
 
@@ -27,6 +27,9 @@ export class CompanyprofilePage {
 
   ionViewDidLoad() {
     this.company.getUserData()
+    //returns the logged in user data
+    //subscribe to the observable
+    //res = result
       .subscribe(res => {
         this.user = res.user
       });
@@ -78,10 +81,12 @@ export class CompanyprofilePage {
         {
           text: 'Add',
           cssClass: 'alertCss',
+          //handler uses the data property
           handler: data => {
+            //company comes from profile
             this.company.registerEmployee(profile, this.user, data.role)
               .subscribe(res => {
-                if(res.message){
+                  if(res.message){
                   let toast = this.toastCtrl.create({
                     message: res.message,
                     duration: 3000,

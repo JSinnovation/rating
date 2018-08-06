@@ -17,11 +17,11 @@
       </button>
     </ion-list>
 <ion-list no-lines>
-    <button ion-item menuClose>
+    <button ion-item menuClose (click)="settings()">
         <ion-icon name = "settings" item-left></ion-icon>
         Settings
       </button>
-  <button ion-item menuClose (click) = "logout()">
+  <button ion-item menuClose >
     <ion-icon name = "log-out" item-left></ion-icon>
     Logout
   </button>

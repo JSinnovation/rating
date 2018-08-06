@@ -29,9 +29,9 @@ const companySchema = mongoose.Schema({
     benefitsTotal: [Number],
     balanceTotal: [Number],
     speedTotal: [Number],
-   // employees: [{
-      //  employee: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-   // }]
+   employees: [{
+      employee: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+   }]
 });
 
 module.exports = mongoose.model('Company', companySchema);
