@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 282:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompaniesPageModule", function() { return CompaniesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(422);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__companies__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_rating__ = __webpack_require__(296);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var CompaniesPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 291:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -225,7 +225,7 @@ var Ionic2Rating = (function () {
 
 /***/ }),
 
-/***/ 292:
+/***/ 294:
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -251,61 +251,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
-/***/ }),
-
-/***/ 293:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(294);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(291);
-/* unused harmony reexport Ionic2Rating */
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 294:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ionic2RatingModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(291);
-
-
-
-
-var Ionic2RatingModule = (function () {
-    function Ionic2RatingModule() {
-    }
-    Ionic2RatingModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */], args: [{
-                    declarations: [
-                        __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__["a" /* Ionic2Rating */]
-                    ],
-                    exports: [
-                        __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__["a" /* Ionic2Rating */]
-                    ],
-                    imports: [
-                        __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-                        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */]
-                    ],
-                    schemas: [
-                        __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    Ionic2RatingModule.ctorParameters = [];
-    return Ionic2RatingModule;
-}());
-//# sourceMappingURL=ionic2-rating.module.js.map
 
 /***/ }),
 
@@ -17419,18 +17364,73 @@ var Ionic2RatingModule = (function () {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50), __webpack_require__(292)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49), __webpack_require__(294)(module)))
 
 /***/ }),
 
-/***/ 422:
+/***/ 296:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__ = __webpack_require__(297);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ionic2_rating_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic2_rating__ = __webpack_require__(293);
+/* unused harmony reexport Ionic2Rating */
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ionic2RatingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__ = __webpack_require__(293);
+
+
+
+
+var Ionic2RatingModule = (function () {
+    function Ionic2RatingModule() {
+    }
+    Ionic2RatingModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */], args: [{
+                    declarations: [
+                        __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__["a" /* Ionic2Rating */]
+                    ],
+                    exports: [
+                        __WEBPACK_IMPORTED_MODULE_3__ionic2_rating__["a" /* Ionic2Rating */]
+                    ],
+                    imports: [
+                        __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */]
+                    ],
+                    schemas: [
+                        __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    Ionic2RatingModule.ctorParameters = [];
+    return Ionic2RatingModule;
+}());
+//# sourceMappingURL=ionic2-rating.module.js.map
+
+/***/ }),
+
+/***/ 423:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompaniesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -17477,11 +17477,15 @@ var CompaniesPage = /** @class */ (function () {
         else {
             this.rating = __WEBPACK_IMPORTED_MODULE_3_lodash__["mean"](number);
         }
-        return this.rating;
+        return this.roundValue(this.rating);
+    };
+    CompaniesPage.prototype.roundValue = function (value) {
+        var factor = Math.pow(10, 1);
+        return Math.round(value * factor) / factor;
     };
     CompaniesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n<img src="http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.state}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n   <span class="avg">  \n      <rating [ngModel]="averageRating(company.ratingOverall)"\n      readOnly="true" \n      max="5" \n      emptyStarIconName="star-outline" \n      halfStarIconName="star-half" \n      starIconName="star" \n      nullable="false"> \n    </rating>\n\n   ({{averageRating(company.ratingOverall)}})\n   </span>\n\n \n    </ion-col>     \n    \n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
+            selector: 'page-companies',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>All Companies</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<!-->angular like a for each loop -->\n<ion-item *ngFor="let company of companies" (click)="companyProfile(company)">\n<ion-row>\n  <ion-col col-2>\n<ion-avatar ion-start>\n  <img *ngIf = "company.imageVersion !== \'\'" src="http://res.cloudinary.com/skyhawk/image/upload/v{{company.imageVersion}}/{{company.imageId}}">\n  <img *ngIf = "company.imageVersion === \'\'" src = "http://placehold.it/10x10">\n</ion-avatar>\n</ion-col>\n<!--grid width in ionic is 12 just like Bootstrap-->\n\n<ion-col col-10 class="rowCol">\n<h2 class = "companyname" text-wrap>\n  {{company.companyname}}\n</h2>\n\n<ion-col class="dataCol">\n  <ion-row>\n    <ion-col col-12 text-wrap> \n<span>\n  <ion-icon name="archive" class="iconClass"> </ion-icon>\n  {{company.sector}}\n</span>\n    </ion-col>\n    <ion-col col-12>\n      <ion-icon name = "pin" class = "iconClass"></ion-icon>\n      {{company.city}}, {{company.state}}\n    </ion-col>\n    <ion-col col-12 class = "rating">\n   <span class="avg">  \n      <rating [ngModel]="averageRating(company.ratingOverall)"\n      readOnly="true" \n      max="5" \n      emptyStarIconName="star-outline" \n      halfStarIconName="star-half" \n      starIconName="star" \n      nullable="false"> \n    </rating>\n\n   ({{averageRating(company.ratingOverall)}})\n   </span>\n\n \n    </ion-col>     \n    \n  </ion-row>\n</ion-col>\n\n  </ion-col>\n\n</ion-row>\n</ion-item>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\companies\companies.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],

@@ -1,88 +1,13 @@
-webpackJsonp([9],{
+webpackJsonp([11],{
 
-/***/ 113:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 113;
-
-/***/ }),
-
-/***/ 155:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"../pages/companies/companies.module": [
-		282,
-		2
-	],
-	"../pages/companyprofile/companyprofile.module": [
-		281,
-		1
-	],
-	"../pages/createcompany/createcompany.module": [
-		284,
-		8
-	],
-	"../pages/home/home.module": [
-		283,
-		7
-	],
-	"../pages/login/login.module": [
-		285,
-		6
-	],
-	"../pages/register/register.module": [
-		286,
-		5
-	],
-	"../pages/review/review.module": [
-		287,
-		4
-	],
-	"../pages/settings/settings.module": [
-		288,
-		3
-	],
-	"../pages/viewreviews/viewreviews.module": [
-		289,
-		0
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 155;
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 198:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompanyProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -130,22 +55,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-
+var BASEURL = 'http://localhost:3000/api';
 var CompanyProvider = /** @class */ (function () {
-    function CompanyProvider(http, storage, platform) {
-        var _this = this;
+    function CompanyProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.platform = platform;
-        this.platform.ready().then(function () {
-            _this.getEmail();
-        });
     }
     // Here we call getEmail
-    CompanyProvider.prototype.getUserData = function () {
-        this.getEmail();
+    CompanyProvider.prototype.getUserData = function (email) {
         return this.http
-            .get("http://localhost:3000/api/home/" + this.email);
+            .get(BASEURL + "/home/" + email);
         //backtick is for template strings
     };
     CompanyProvider.prototype.getUserDataByEmail = function (email) {
@@ -153,7 +72,7 @@ var CompanyProvider = /** @class */ (function () {
             .get("http://localhost:3000/api/home/" + email);
         //backtick is for template strings
     };
-    CompanyProvider.prototype.getUserEmail = function () {
+    CompanyProvider.prototype.getEmail = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -163,17 +82,8 @@ var CompanyProvider = /** @class */ (function () {
             });
         });
     };
-    CompanyProvider.prototype.getEmail = function () {
-        var _this = this;
-        this.storage.get('useremail').then(function (value) {
-            //console.log(value);
-            _this.email = value;
-        });
-    };
-    // ? is an optional parameter
     CompanyProvider.prototype.createCompany = function (name, address, city, state, zipcode, country, sector, website, userId) {
-        return this.http
-            .post('http://localhost:3000/api/company/create', {
+        return this.http.post(BASEURL + "/company/create", {
             name: name,
             address: address,
             city: city,
@@ -211,18 +121,34 @@ var CompanyProvider = /** @class */ (function () {
             role: role
         });
     };
-    CompanyProvider.prototype.uploadImage = function (userID, image) {
+    CompanyProvider.prototype.uploadImage = function (user, image) {
         return this.http
             .post('http://localhost:3000/api/v1/profile/upload', {
-            userId: userID,
+            user: user,
             image: image
         });
     };
+    //method
+    CompanyProvider.prototype.uploadLogo = function (id, image) {
+        return this.http
+            .post('http://localhost:3000/api/v1/company/upload', {
+            company: id,
+            image: image
+        });
+    };
+    CompanyProvider.prototype.searchCompany = function (company) {
+        return this.http.post('http://localhost:3000/api/search-company', {
+            company: company
+        });
+    };
+    CompanyProvider.prototype.leaderBoard = function () {
+        return this.http
+            .get('http://localhost:3000/api/companies/leaderboard');
+    };
     CompanyProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* Platform */]])
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
     ], CompanyProvider);
     return CompanyProvider;
 }());
@@ -231,12 +157,94 @@ var CompanyProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 114:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 114;
+
+/***/ }),
+
+/***/ 156:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/companies/companies.module": [
+		281,
+		2
+	],
+	"../pages/companyprofile/companyprofile.module": [
+		282,
+		1
+	],
+	"../pages/createcompany/createcompany.module": [
+		283,
+		10
+	],
+	"../pages/home/home.module": [
+		284,
+		9
+	],
+	"../pages/leader/leader.module": [
+		285,
+		8
+	],
+	"../pages/login/login.module": [
+		286,
+		7
+	],
+	"../pages/register/register.module": [
+		287,
+		6
+	],
+	"../pages/review/review.module": [
+		288,
+		5
+	],
+	"../pages/search/search.module": [
+		289,
+		4
+	],
+	"../pages/settings/settings.module": [
+		290,
+		3
+	],
+	"../pages/viewreviews/viewreviews.module": [
+		291,
+		0
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 156;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
 /***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -300,15 +308,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_register_register__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_company_company__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_company_company__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -339,13 +347,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/companyprofile/companyprofile.module#CompanyProfilePageModule', name: 'CompanyprofilePage', segment: 'companyprofile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/companies/companies.module#CompaniesPageModule', name: 'CompaniesPage', segment: 'companies', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/companyprofile/companyprofile.module#CompanyProfilePageModule', name: 'CompanyprofilePage', segment: 'companyprofile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/createcompany/createcompany.module#CreatecompanyPageModule', name: 'CreatecompanyPage', segment: 'createcompany', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/leader/leader.module#LeaderPageModule', name: 'LeaderPage', segment: 'leader', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/review/review.module#ReviewPageModule', name: 'ReviewPage', segment: 'review', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/viewreviews/viewreviews.module#ViewreviewsPageModule', name: 'ViewreviewsPage', segment: 'viewreviews', priority: 'low', defaultHistory: [] }
                     ]
@@ -379,10 +389,11 @@ var AppModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_company_company__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -397,21 +408,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen, storage) {
+    function MyApp(platform, statusBar, splashScreen, storage, company) {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.storage = storage;
+        this.company = company;
         this.initializeApp();
         this.pages = [
             { title: 'Home', component: 'HomePage', icon: 'home' },
             { title: 'Create Company', component: 'CreatecompanyPage', icon: 'create' },
             { title: 'Companies', component: 'CompaniesPage', icon: 'list-box' },
-            { title: 'Search', component: 'HomePage', icon: 'search' },
-            { title: 'Leaderboard', component: 'HomePage', icon: 'archive' },
+            { title: 'Search', component: 'SearchPage', icon: 'search' },
+            { title: 'Leaderboard', component: 'LeaderPage', icon: 'archive' },
         ];
     }
+    //event  Angular once view has fully initialized
+    MyApp.prototype.ngAfterViewInit = function () { };
     MyApp.prototype.initializeApp = function () {
         var _this = this;
         this.platform.ready().then(function () {
@@ -419,14 +434,32 @@ var MyApp = /** @class */ (function () {
             // Here you can do any higher level native things you might need.
             _this.statusBar.styleDefault();
             _this.splashScreen.hide();
-            _this.storage.get('useremail').then(function (loggedIn) {
-                if (loggedIn === null) {
-                    _this.nav.setRoot("LoginPage");
+            _this.company.getEmail().then(function (result) {
+                if (result === null) {
+                    _this.nav.setRoot('LoginPage');
                 }
-                if (loggedIn !== null) {
+                if (result !== null) {
+                    _this.company.getUserData(result)
+                        .subscribe(function (res) {
+                        _this.user = res.user;
+                    });
                     _this.nav.setRoot("HomePage");
                 }
             });
+            /* this.storage.get('useremail').then(loggedIn => {
+              if(loggedIn === null){
+                this.nav.setRoot("LoginPage");
+              }
+      
+              if(loggedIn !== null){
+                this.company.getUserData()
+                .subscribe(res=> {
+                  this.user = res.user;
+      })
+                this.nav.setRoot("HomePage");
+              }
+            });
+       */
         });
     };
     MyApp.prototype.openPage = function (page) {
@@ -442,19 +475,20 @@ var MyApp = /** @class */ (function () {
     };
     MyApp.prototype.logout = function () {
         this.storage.remove('useremail');
-        this.nav.setRoot('LoginPage');
+        this.nav.setRoot("LoginPage");
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Websites\rating\rateme\src\app\app.html"*/'<ion-menu [content]="content" id="menu-avatar">\n   <ion-content>\n     <div>\n       <ion-row style = "align-items:center">\n         <ion-col col-12 class="imgCol">\n      <img class = "user-avatar round" src="http://placehold.it/50x50">\n         </ion-col>\n  </ion-row>\n  <ion-row style = "justify-content: center">\n    <h3>Full Name</h3>\n  </ion-row>\n     </div>\n    <ion-list no-lines>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name] = "p.icon" item-left></ion-icon> <!--square brackets to bind it p.icon from the array-->\n        {{p.title}}\n      </button>\n    </ion-list>\n<ion-list no-lines>\n    <button ion-item menuClose (click)="settings()">\n        <ion-icon name = "settings" item-left></ion-icon>\n        Settings\n      </button>\n  <button ion-item menuClose >\n    <ion-icon name = "log-out" item-left></ion-icon>\n    Logout\n  </button>\n</ion-list>\n    \n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Websites\rating\rateme\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Websites\rating\rateme\src\app\app.html"*/'<ion-menu [content]="content" id="menu-avatar">\n   <ion-content>\n     <div>\n       <ion-row style = "align-items:center">\n         <ion-col col-12 class="imgCol">\n     \n      <img *ngIf="user" class = "user-avatar round" src="http://res.cloudinary.com/skyhawk/image/upload/v{{user.imageVersion}}/{{user.imageId}}">\n         </ion-col>\n  </ion-row>\n  <ion-row style = "justify-content: center">\n   <h3 *ngIf="user">{{user.fullname}}</h3>\n\n  </ion-row>\n     </div>\n    <ion-list no-lines>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name] = "p.icon" item-left></ion-icon> <!--square brackets to bind it p.icon from the array-->\n        {{p.title}}\n      </button>\n    </ion-list>\n<ion-list no-lines>\n    <button ion-item menuClose (click)="settings()">\n        <ion-icon name = "settings" item-left></ion-icon>\n        Settings\n      </button>\n      <button ion-item menuClose (click)="logout()">\n        <ion-icon name="log-out" item-left></ion-icon>\n        Logout\n      </button>\n  \n</ion-list>\n    \n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Websites\rating\rateme\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_company_company__["a" /* CompanyProvider */]])
     ], MyApp);
     return MyApp;
 }());

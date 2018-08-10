@@ -1,3 +1,4 @@
+import { CompanyProvider } from './../../providers/company/company';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -7,18 +8,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  user: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private company: CompanyProvider
+  ) {}
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad HomePage');
-  }
-openPage(){
-  this.navCtrl.push("CreatecompanyPage");
+     this.company.getEmail().then(result => {
+   
+       this.GetData(result);
+     });
+     
+    }
+ 
+GetData(email){
+  this.company.getUserData(email).subscribe(res => {
+    //console.log(res.user)
+        this.user = res.user;
+    });
 }
+
+
 reviewPage(){
   this.navCtrl.push("ReviewPage");
 }
-
+goToSearch(){
+  this.navCtrl.push("SearchPage");
+}
+addCompany(){
+  this.navCtrl.push("CreatecompanyPage");
+}
 }

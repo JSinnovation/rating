@@ -5,10 +5,10 @@ webpackJsonp([8],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatecompanyPageModule", function() { return CreatecompanyPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeaderPageModule", function() { return LeaderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createcompany__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__leader__ = __webpack_require__(427);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CreatecompanyPageModule = /** @class */ (function () {
-    function CreatecompanyPageModule() {
+var LeaderPageModule = /** @class */ (function () {
+    function LeaderPageModule() {
     }
-    CreatecompanyPageModule = __decorate([
+    LeaderPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */],
+                __WEBPACK_IMPORTED_MODULE_2__leader__["a" /* LeaderPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__createcompany__["a" /* CreatecompanyPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__leader__["a" /* LeaderPage */]),
             ],
         })
-    ], CreatecompanyPageModule);
-    return CreatecompanyPageModule;
+    ], LeaderPageModule);
+    return LeaderPageModule;
 }());
 
-//# sourceMappingURL=createcompany.module.js.map
+//# sourceMappingURL=leader.module.js.map
 
 /***/ }),
 
-/***/ 425:
+/***/ 427:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatecompanyPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(198);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeaderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,80 +58,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CreatecompanyPage = /** @class */ (function () {
-    function CreatecompanyPage(navCtrl, navParams, company, alertCtrl, toastCtrl) {
+var LeaderPage = /** @class */ (function () {
+    function LeaderPage(navCtrl, navParams, company) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.company = company;
-        this.alertCtrl = alertCtrl;
-        this.toastCtrl = toastCtrl;
+        this.companies = [];
     }
-    CreatecompanyPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.company.getUserEmail().then(function (value) {
-            _this.GetUserData(value);
-        });
+    LeaderPage.prototype.companyProfile = function (company) {
+        //console.log(company)
+        this.navCtrl.push("CompanyprofilePage", { "data": company });
+        // this.navCtrl.push('CreatecorporationPage')
     };
-    CreatecompanyPage.prototype.ionViewDidEnter = function () {
-        this.company.getUserData()
+    LeaderPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.company.leaderBoard()
             .subscribe(function (res) {
-            if (res.user !== null) {
-                // this.userId = res.user._id;
-                // console.log(res);
-            }
+            _this.companies = res.result;
         });
     };
-    CreatecompanyPage.prototype.GetUserData = function (email) {
-        var _this = this;
-        this.company.getUserDataByEmail(email).subscribe(function (res) {
-            _this.userId = res.user._id;
-            console.log(res);
-        });
-    };
-    CreatecompanyPage.prototype.register = function () {
-        var _this = this;
-        this.company.createCompany(this.name, this.address, this.city, this.state, this.zipcode, this.country, this.sector, this.website, this.userId)
-            .subscribe(function (res) {
-            if (res.message) {
-                var toast = _this.toastCtrl.create({
-                    message: res.message,
-                    duration: 3000,
-                    position: 'bottom'
-                });
-                toast.present();
-            }
-            if (res.error) {
-                var alert_1 = _this.alertCtrl.create({
-                    title: 'Error',
-                    subTitle: res.error,
-                    buttons: ['OK']
-                });
-                alert_1.present();
-            }
-        });
-        this.name = '';
-        this.address = '';
-        this.city = '';
-        this.state = '';
-        this.zipcode = '';
-        this.sector = '';
-        this.website = '';
-        this.country = '';
-    };
-    CreatecompanyPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-createcompany',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register Company</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<div ion-fixed style="height:100%; width:100%">\n    <ion-item>\n      <ion-label color="primary" stacked>Company Name</ion-label>\n        <ion-input type="text" [(ngModel)]="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Company Address</ion-label>\n        <ion-input type="text" [(ngModel)]="address"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>City</ion-label>\n        <ion-input type="text" [(ngModel)]="city"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>State</ion-label>\n        <ion-input type="text" [(ngModel)]="state"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Zipcode</ion-label>\n        <ion-input type="text" [(ngModel)]="zipcode"></ion-input>\n        </ion-item>\n        <ion-item>\n        <ion-label color="primary" stacked>Country</ion-label>\n        <ion-input type="text" [(ngModel)]="country"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Sector</ion-label>\n        <ion-input type="text" [(ngModel)]="sector"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label color="primary" stacked>Website</ion-label>\n        <ion-input type="text" [(ngModel)]="website"></ion-input>\n      </ion-item>\n\n      <ion-item class="btnItem">\n        <button ion-button block (click)="register()">Register</button>\n      </ion-item>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\createcompany\createcompany.html"*/,
+    LeaderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-leader',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\leader\leader.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>Top Rated</ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  \n  <ion-content>\n   \n    <ion-item *ngFor="let company of companies ; let i = index;" (click)="companyProfile(company)" > \n      <!--note above we use a semicolon and close the quotes and then add the click event-->\n      <ion-row>\n        <ion-col col-2>\n          <ion-avatar item-start>\n            <img *ngIf="company.imageVersion !== \'\'" src="http://res.cloudinary.com/rateapp/image/upload/v{{company.imageVersion}}/{{company.imageId}}">\n            <img *ngIf="company.imageVersion === \'\'" src="http://placehold.it/10x10">\n          </ion-avatar>\n        </ion-col>\n  \n        <ion-col col-10 class="rowCol">\n          <h2 class="companyname" text-wrap>\n            {{company.companyname}}\n          </h2>\n  \n          <ion-col class="dataCol">\n            <ion-row>\n              <ion-col col-12 text-wrap>\n                <span>\n                  <ion-icon name="star" class="iconClass"></ion-icon>\n                  {{company.totalStars}} Total Stars\n                </span>\n              </ion-col>\n              <ion-col col-12 text-wrap>\n                <ion-icon name="add-circle" class="iconClass"></ion-icon>\n                #{{i + 1}}\n              </ion-col>\n  \n              <ion-col col-12 class="rating">\n                \n              </ion-col>\n            </ion-row>\n          </ion-col>\n  \n        </ion-col>\n  \n      </ion-row>\n    </ion-item>\n  </ion-content>\n  '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\leader\leader.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
-    ], CreatecompanyPage);
-    return CreatecompanyPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
+    ], LeaderPage);
+    return LeaderPage;
 }());
 
-//# sourceMappingURL=createcompany.js.map
+//# sourceMappingURL=leader.js.map
 
 /***/ })
 

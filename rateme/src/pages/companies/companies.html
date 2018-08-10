@@ -13,7 +13,8 @@
 <ion-row>
   <ion-col col-2>
 <ion-avatar ion-start>
-<img src="http://placehold.it/10x10">
+  <img *ngIf = "company.imageVersion !== ''" src="http://res.cloudinary.com/skyhawk/image/upload/v{{company.imageVersion}}/{{company.imageId}}">
+  <img *ngIf = "company.imageVersion === ''" src = "http://placehold.it/10x10">
 </ion-avatar>
 </ion-col>
 <!--grid width in ionic is 12 just like Bootstrap-->

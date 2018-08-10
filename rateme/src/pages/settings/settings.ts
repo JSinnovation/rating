@@ -18,20 +18,24 @@ imagePath: string;
     public navParams: NavParams,
     private company: CompanyProvider,
     private camera: Camera
-  ) {
-  }
-  //because this returns an observable, we need to subscribe
-  ionViewDidLoad() {
-   
-   }
+  ) {}
 
-ionViewDidEnter(){
-  this.company.getUserData()
-  .subscribe(res=> {
-    console.log(res.user)
-    this.user = res.user; 
- });
-}
+  ionViewDidEnter(){}
+ 
+   ionViewDidLoad() {
+    this.company.getEmail().then(result => {
+      this.getData(result);
+    });
+  }
+
+  getData(email){
+    this.company.getUserData(email).subscribe(res => {
+      this.user = res.user;
+   
+    });
+  }
+
+
 addImage(){
 const options: CameraOptions = {
   quality: 50,
@@ -46,10 +50,35 @@ const options: CameraOptions = {
 }
   this.camera.getPicture(options).then((imgUrl) => {
     this.imagePath = 'data:image/jpeg;base64,' + imgUrl
-  console.log(this.imagePath)
+ 
+    this.company.uploadImage(this.user, this.imagePath)
+    .subscribe(res => {
+console.log (res) 
+    });
   })
 }
-
+addLogo(name){
+  const options: CameraOptions = {
+    quality: 50,
+    destinationType:this.camera.DestinationType.DATA_URL,
+    sourceType:this.camera.PictureSourceType.PHOTOLIBRARY,
+    allowEdit: false,
+    correctOrientation: true,
+    encodingType:this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE,
+    targetWidth:300,
+    targetHeight:300,
+  }
+    this.camera.getPicture(options).then((imgUrl) => {
+      this.imagePath = 'data:image/jpeg;base64,' + imgUrl
+   
+      this.company.uploadLogo(name._id, this.imagePath)
+      .subscribe(res => {
+  console.log (res)
+      });
+    })
+  
+}
 }
 
 

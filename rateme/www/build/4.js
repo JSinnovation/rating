@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewPageModule", function() { return ReviewPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__review__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search__ = __webpack_require__(431);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReviewPageModule = /** @class */ (function () {
-    function ReviewPageModule() {
+var SearchPageModule = /** @class */ (function () {
+    function SearchPageModule() {
     }
-    ReviewPageModule = __decorate([
+    SearchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */],
+                __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */]),
             ],
         })
-    ], ReviewPageModule);
-    return ReviewPageModule;
+    ], SearchPageModule);
+    return SearchPageModule;
 }());
 
-//# sourceMappingURL=review.module.js.map
+//# sourceMappingURL=search.module.js.map
 
 /***/ }),
 
-/***/ 428:
+/***/ 431:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(198);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_company_company__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,67 +58,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ReviewPage = /** @class */ (function () {
-    function ReviewPage(navCtrl, navParams, company, toastCtrl) {
+var SearchPage = /** @class */ (function () {
+    function SearchPage(navCtrl, navParams, company) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.company = company;
-        this.toastCtrl = toastCtrl;
-        this.companyProfile = this.navParams.get("data");
-        this.name = this.companyProfile.companyname;
+        //defining and initializing at the same time is TypeScript
+        this.searchResults = [];
+        this.showList = true;
+        this.showResults = [];
+        this.results = false;
+        this.noResults = false;
     }
-    ReviewPage.prototype.ionViewDidLoad = function () {
-        this.getData();
+    SearchPage.prototype.ionViewDidLoad = function () {
     };
-    ReviewPage.prototype.addReview = function () {
+    SearchPage.prototype.searchCompany = function () {
         var _this = this;
-        this.company.addCompanyReview(this.companyProfile._id, this.culture, this.benefits, this.balance, this.speed, this.overall, this.review, this.userid)
+        this.showList = true;
+        this.company.searchCompany(this.companyname)
             .subscribe(function (res) {
-            //console.log(res.user);
-            if (res.message) {
-                var toast = _this.toastCtrl.create({
-                    message: res.message,
-                    duration: 3000,
-                    position: "bottom"
-                });
-                toast.present();
-                // console.log(res)
+            if (res.results.length > 0) {
+                _this.results = true;
+                _this.noResults = false;
+                _this.showResults = res.results;
+                _this.searchResults = res.results;
             }
-            if (res.error) {
-                //console.log(res)
-                var toast = _this.toastCtrl.create({
-                    message: res.error,
-                    duration: 3000,
-                    position: "bottom"
-                });
-                toast.present();
-            }
-        });
-        this.review = '';
-    };
-    ReviewPage.prototype.getData = function () {
-        var _this = this;
-        this.company.getUserData()
-            .subscribe(function (res) {
-            console.log(res.user);
-            if (res.user !== null) {
-                _this.userid = res.user._id;
+            else {
+                _this.noResults = true;
+                _this.showResults = res.results;
+                _this.searchResults = [{ "companyname": "No results found" }];
             }
         });
     };
-    ReviewPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-review',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\review\review.html"*/'<ion-header>\n\n  <ion-navbar>\n  <ion-title>{{ name }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-item>\n    <ion-label color="primary" stacked>Culture and Values</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="culture" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Compensation and Benefits</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="benefits" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Worklife Balance</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="balance" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Speed of Service</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="speed" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Overall</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="overall" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-grid>\n    <ion-row>\n      <ion-label color="primary" stacked>Review</ion-label>\n      <ion-col col-12>\n        <ion-textarea [(ngModel)]="review"></ion-textarea>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-item>\n    <button ion-button block (click)="addReview()">Add Review</button>\n  </ion-item>\n</ion-content>\n\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\review\review.html"*/,
+    SearchPage.prototype.onCancel = function (event) {
+        this.showList = false;
+    };
+    SearchPage.prototype.onClear = function (event) {
+        this.showList = false;
+    };
+    SearchPage.prototype.companyProfile = function (company) {
+        this.showList = false;
+        this.companyname = '';
+        this.navCtrl.push("CompanyprofilePage", { data: company });
+    };
+    SearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-search',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\search\search.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-searchbar\n[(ngModel)]="companyname"\n[showCancelButton]="true"\n(keyup)="searchCompany()"\n(ionCancel)="onCancel($event)"\n(ionClear)="onClear($event)" \n></ion-searchbar>\n\n<ion-list *ngIf="showList">\n  <ion-item *ngFor="let company of searchResults">\n<h2>\n  <button ion-item *ngIf = "results && showResults.length > 0" (click)="companyProfile(company)"> \n{{company.companyname}}\n  </button>\n</h2>\n\n<button ion-item *ngIf = "noResults && showResults.length === 0">\n{{company.companyname}}\n</button>\n  </ion-item>\n</ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\search\search.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
-    ], ReviewPage);
-    return ReviewPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_company_company__["a" /* CompanyProvider */]])
+    ], SearchPage);
+    return SearchPage;
 }());
 
-//# sourceMappingURL=review.js.map
+//# sourceMappingURL=search.js.map
 
 /***/ })
 

@@ -108,27 +108,34 @@ exports.addEmployee = async (req, res) => {
 
     return res.status(200).json({message: 'Role added successfully.'});
 }
-/* 
+
 exports.search = async (req, res) => {
+
     const searchName = req.body.company;
+    //gi ignore case
     const regex = new RegExp(searchName, 'gi');
+      //await bcs of async await
     const company = await Company.find({"companyname": regex});
 
+  
     if(company.length > 0){
         return res.status(200).json({message: "Search Results", results: company});
     } else {
         return res.status(200).json({message: "Search Results", results: []});
     }
 }
+  
+
 
 exports.leaderBoard = async (req, res) => {
+    //find all companies{}
     const results = await Company.find({})
                         .sort({"totalStars": -1});
-
+                        //-1 decending order
     return res.status(200).json({result: results}); 
  
-*/
 
+}
 
 
 

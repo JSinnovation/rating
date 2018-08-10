@@ -26,13 +26,20 @@ export class CompanyprofilePage {
   }
 
   ionViewDidLoad() {
-    this.company.getUserData()
+    
     //returns the logged in user data
     //subscribe to the observable
     //res = result
-      .subscribe(res => {
-        this.user = res.user
-      });
+    this.company.getEmail().then(result => {
+      this.getData(result);
+    });
+  }
+
+  getData(email){
+    this.company.getUserData(email).subscribe(res => {
+      this.user = res.user;
+   
+    });
   }
 
   reviewPage(profile){

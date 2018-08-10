@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 286:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewPageModule", function() { return ReviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__review__ = __webpack_require__(430);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RegisterPageModule = /** @class */ (function () {
-    function RegisterPageModule() {
+var ReviewPageModule = /** @class */ (function () {
+    function ReviewPageModule() {
     }
-    RegisterPageModule = __decorate([
+    ReviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
+                __WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__review__["a" /* ReviewPage */]),
             ],
         })
-    ], RegisterPageModule);
-    return RegisterPageModule;
+    ], ReviewPageModule);
+    return ReviewPageModule;
 }());
 
-//# sourceMappingURL=register.module.js.map
+//# sourceMappingURL=review.module.js.map
 
 /***/ }),
 
-/***/ 426:
+/***/ 430:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_register_register__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_company_company__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,76 +58,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var RegisterPage = /** @class */ (function () {
-    function RegisterPage(navCtrl, navParams, reg, loadingCtrl, alertCtrl, storage) {
+var ReviewPage = /** @class */ (function () {
+    function ReviewPage(navCtrl, navParams, company, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.reg = reg;
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
-        this.storage = storage;
+        this.company = company;
+        this.toastCtrl = toastCtrl;
+        this.companyProfile = this.navParams.get("data");
+        this.name = this.companyProfile.companyname;
     }
-    RegisterPage.prototype.ionViewDidLoad = function () {
-    };
-    RegisterPage.prototype.loginPage = function () {
-        this.navCtrl.setRoot("LoginPage");
-    };
-    RegisterPage.prototype.userSignup = function () {
+    ReviewPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        if (this.fullname !== undefined || this.email !== undefined || this.password !== undefined) {
-            this.showLoading();
-            this.reg.registerUser(this.fullname, this.email, this.password)
-                .subscribe(function (res) {
-                _this.loading.dismiss();
-                if (res.user) {
-                    _this.storage.set('useremail', res.user.email);
-                    _this.navCtrl.setRoot("HomePage");
-                }
-                if (res.error) {
-                    var alert_1 = _this.alertCtrl.create({
-                        title: 'Sign Up Error',
-                        subTitle: res.error,
-                        buttons: ['OK']
-                    });
-                    alert_1.present();
-                }
-            });
-            this.fullname = '';
-            this.password = '';
-            this.email = '';
-        }
-        else {
-            var alert_2 = this.alertCtrl.create({
-                title: 'Sign Up Error',
-                subTitle: 'You cannot submit empty fields',
-                buttons: ['OK']
-            });
-            alert_2.present();
-        }
-    };
-    RegisterPage.prototype.showLoading = function () {
-        this.loading = this.loadingCtrl.create({
-            content: 'Authenticating.....',
-            duration: 3000
+        this.company.getEmail().then(function (result) {
+            _this.getData(result);
         });
-        this.loading.present();
     };
-    RegisterPage = __decorate([
+    ReviewPage.prototype.addReview = function () {
+        var _this = this;
+        this.company.addCompanyReview(this.companyProfile._id, this.culture, this.benefits, this.balance, this.speed, this.overall, this.review, this.userid)
+            .subscribe(function (res) {
+            //console.log(res.user);
+            if (res.message) {
+                var toast = _this.toastCtrl.create({
+                    message: res.message,
+                    duration: 3000,
+                    position: "bottom"
+                });
+                toast.present();
+                // console.log(res)
+            }
+            if (res.error) {
+                //console.log(res)
+                var toast = _this.toastCtrl.create({
+                    message: res.error,
+                    duration: 3000,
+                    position: "bottom"
+                });
+                toast.present();
+            }
+        });
+        this.review = '';
+    };
+    ReviewPage.prototype.getData = function (email) {
+        var _this = this;
+        this.company.getUserData(email)
+            .subscribe(function (res) {
+            if (res.user !== null) {
+                _this.userid = res.user._id;
+            }
+        });
+    };
+    ReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\register\register.html"*/'<ion-content>\n  <div padding ion-fixed style="height:100%; width:100%">\n      <div class="logo">\n          <img src="http://placehold.it/50x50">\n        </div>\n        <ion-item>\n          <ion-input type="text"[(ngModel)]="fullname" name ="fullname" placeholder="Fullname"></ion-input>\n          </ion-item>\n      <ion-item>\n        <ion-input type="email"[(ngModel)]="email" name ="email" placeholder="Email"></ion-input>\n        </ion-item>\n      \n        <ion-item>\n        <ion-input type="password" [(ngModel)]="password" name = "password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block class="loginBtn" (click) = "userSignup()">Sign Up</button>\n      <br> \n      <button ion-button block clear class="signup" (click)="loginPage()">Already have an account? Login</button>\n  </div> \n</ion-content>\n '/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\register\register.html"*/,
+            selector: 'page-review',template:/*ion-inline-start:"C:\Websites\rating\rateme\src\pages\review\review.html"*/'<ion-header>\n\n  <ion-navbar>\n  <ion-title>{{ name }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-item>\n    <ion-label color="primary" stacked>Culture and Values</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="culture" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Compensation and Benefits</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="benefits" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Worklife Balance</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="balance" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Speed of Service</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="speed" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="primary" stacked>Overall</ion-label>\n    <ion-range min="1" max="5" [(ngModel)]="overall" pin="true"></ion-range>\n  </ion-item>\n\n  <ion-grid>\n    <ion-row>\n      <ion-label color="primary" stacked>Review</ion-label>\n      <ion-col col-12>\n        <ion-textarea [(ngModel)]="review"></ion-textarea>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-item>\n    <button ion-button block (click)="addReview()">Add Review</button>\n  </ion-item>\n</ion-content>\n\n'/*ion-inline-end:"C:\Websites\rating\rateme\src\pages\review\review.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_register_register__["a" /* RegisterProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
-    ], RegisterPage);
-    return RegisterPage;
+            __WEBPACK_IMPORTED_MODULE_2__providers_company_company__["a" /* CompanyProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+    ], ReviewPage);
+    return ReviewPage;
 }());
 
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=review.js.map
 
 /***/ })
 

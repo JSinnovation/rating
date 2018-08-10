@@ -32,7 +32,9 @@ this.name = this.companyProfile.companyname;
   }
  
   ionViewDidLoad() {
-    this.getData()
+    this.company.getEmail().then(result => {
+      this.getData(result);
+    })
   }
 
   addReview(){
@@ -65,16 +67,18 @@ this.company.addCompanyReview(this.companyProfile._id,this.culture,this.benefits
 this.review = '';
   }
   
-   getData(){
-     this.company.getUserData()
+ 
+
+
+   getData(email){
+     this.company.getUserData(email)
        .subscribe(res => {
-         console.log(res.user)
-         if (res.user!==null){
+              if (res.user!==null){
           this.userid = res.user._id;
          }
       });
      
-   }
+   } 
   }
 
 

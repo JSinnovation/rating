@@ -1,31 +1,27 @@
-import {Platform} from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-
+const BASEURL = 'http://localhost:3000/api';
 
 @Injectable()
 export class CompanyProvider {
-
-  email: any;
  
   constructor(
     public http: HttpClient,  
     private storage:Storage, 
-    private platform:Platform
+   
+   
   ) {
-        this.platform.ready().then(() => {
-          this.getEmail();
-        });
+       
   }
 
   // Here we call getEmail
-getUserData(): Observable<any>{
-this.getEmail();
+getUserData(email): Observable<any>{
+
 return this.http
-.get(`http://localhost:3000/api/home/${this.email}`);
+.get(`${BASEURL}/home/${email}`);
 //backtick is for template strings
   }
 
@@ -36,23 +32,24 @@ return this.http
     //backtick is for template strings
   }
 
-  async getUserEmail() {
-    return await this.storage.get('useremail')
+  async getEmail() {
+    return await this.storage.get('useremail');
+    //returns a promise
   }
 
 
-getEmail(){
-  this.storage.get('useremail').then(value=> {
-    //console.log(value);
-    this.email = value;
-  });
-}
-
-// ? is an optional parameter
-
-  createCompany(name, address, city, state, zipcode, country, sector, website, userId?): Observable<any> {
-    return this.http
-      .post('http://localhost:3000/api/company/create', {
+  createCompany(
+    name, 
+    address, 
+    city, 
+    state, 
+    zipcode, 
+    country, 
+    sector, 
+    website, 
+    userId?
+  ): Observable<any> {
+    return this.http.post(`${BASEURL}/company/create`, {
         name,
         address,
         city,
@@ -92,13 +89,33 @@ registerEmployee(company, user, role): Observable<any>{
       role: role
     });
   }
-uploadImage(userID, image): Observable<any>{
+uploadImage(user, image): Observable<any>{
   return this.http 
   .post('http://localhost:3000/api/v1/profile/upload',{
-    userId: userID,
+    user: user,
     image: image
   });
 }
+//method
+uploadLogo(id, image): Observable<any>{
+  return this.http 
+  .post('http://localhost:3000/api/v1/company/upload',{
+    company: id,
+    image: image
+  });
+
+}
+
+searchCompany(company):Observable<any>{
+  return this.http.post('http://localhost:3000/api/search-company',{
+    company: company
+  });
+}
+
+leaderBoard(): Observable<any>{
+  return this.http
+  .get('http://localhost:3000/api/companies/leaderboard');
+} 
 
 }
 

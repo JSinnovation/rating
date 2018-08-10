@@ -27,35 +27,22 @@ userData: any;
     private company: CompanyProvider,
     private alertCtrl: AlertController,
     private toastCtrl: ToastController
-  ) {
-  }
+  ) {}
+
+ionViewDidEnter() {}
 
   ionViewDidLoad() {
-    this.company.getUserEmail().then(value => {
-      this.GetUserData(value);
-    })
+    this.company.getEmail().then(result => {
+      this.getData(result);
+    });
   }
 
-   ionViewDidEnter(){
-  
-    this.company.getUserData()
-    
-    .subscribe(res=> {
-      if(res.user !== null){
-        // this.userId = res.user._id;
-        // console.log(res);
-        
-      }
+  getData(email){
+    this.company.getUserData(email).subscribe(res => {
+      this.userId = res.user_id;
     });
-    
-   }
-
-   GetUserData(email) {
-     this.company.getUserDataByEmail(email).subscribe(res => {
-      this.userId = res.user._id;
-      console.log(res);
-     })
-   }
+  }
+  
 
   register(){
     this.company.createCompany(this.name, this.address, this.city, this.state, this.zipcode, this.country, this.sector, this.website, this.userId)

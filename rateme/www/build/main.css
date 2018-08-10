@@ -31127,6 +31127,56 @@ page-home ion-content .icon-md {
   margin-left: 145px !important;
 }
 
+page-leader ion-content ion-avatar img {
+  border-radius: 0px !important;
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+page-leader ion-content .rowCol {
+  margin-top: 3px;
+  height: auto;
+  bottom: -3px !important;
+  padding-bottom: 0px !important;
+  color: #73879C;
+  padding-left: 15px !important;
+}
+
+page-leader ion-content .companyname {
+  width: auto !important;
+  color: #4aa1f3;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px !important;
+}
+
+page-leader ion-content .iconClass.icon-md {
+  padding-left: 5px !important;
+  color: #4aa1f3;
+  margin-left: -3px !important;
+}
+
+page-leader ion-content .dataCol {
+  padding: 0px;
+  margin-top: 4px !important;
+  width: auto !important;
+}
+
+page-leader ion-content .rating {
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-right: 5px !important;
+}
+
+page-leader ion-content .avg {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 page-login ion-content {
   background: #4aa1f3 !important;
 }

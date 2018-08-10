@@ -9,8 +9,8 @@ const userSchema = mongoose.Schema({
     companies: [{
         company: {type: mongoose.Schema.Types.ObjectId, ref: 'Company'}
         }],
-        imageId: {type: String, default: ''},
-        imageVersion: {tpe: String, default: ''}
+        imageId: {type: String, default: 'defaultPic.png'},
+        imageVersion: {type: String, default: '1533738014'}
     });
 
 userSchema.methods.encryptPassword = (password) => {
